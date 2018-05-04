@@ -1,0 +1,23 @@
+{
+  "name": "BusinessSandbox",
+  "version": "1.0.0",
+  "description": "Play space for work experiments. Jason Mayer Studio // Global Payments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonMayerStudio/BusinessSandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonMayerStudio/BusinessSandbox/issues"
+  },
+  "homepage": "https://github.com/JasonMayerStudio/BusinessSandbox#readme",
+  "devDependencies": {
+    "webpack": "^4.7.0"
+  }
+}
