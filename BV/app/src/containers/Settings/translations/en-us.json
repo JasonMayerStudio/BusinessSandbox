@@ -1,0 +1,39 @@
+{
+  "personalInfo": {
+    "title": "Personal Information",
+    "Account User": "Account User",
+    "Tech Support Admin": "Tech Support Admin",
+    "Account Admin": "Account Admin",
+    "Internal Employee": "Internal Employee",
+    "Regional PM": "Regional PM",
+    "Worldwide PM": "Worldwide PM",
+    "Customer Service": "Customer Service",
+    "Masterfile Analyst": "Masterfile Analyst",
+    "Acquirer User": "Acquirer User",
+    "Acquirer Admin": "Acquirer Admin",
+    "editButton": "Edit",
+    "cancelButton": "Cancel",
+    "saveChangesButton": "Save Changes",
+    "saveChangesProgress": "Saving Changes..."
+  },
+  "preferences": {
+    "title": "Preferences",
+    "language": "Language",
+    "timeFormat": "Time Format",
+    "timeFormat24": "Show 24-hour clock (16:30)",
+    "timeFormatAmPm": "Show AM/PM (4:30pm)",
+    "dateFormat": "Date Format",
+    "savePrefs": "Save Preferences",
+    "savePrefsInProgress": "Saving Preferences..."
+  },
+  "emailSubscriptions": {
+    "title": "Email Subscriptions",
+    "Global Payments": "Global Payments",
+    "Latest news and marketing information from Global Payments": "Latest news and marketing information from Global Payments",
+    "BusinessView Activity Alerts": "BusinessView Activity Alerts",
+    "New Statements": "New Statements",
+    "New Reports": "New Reports",
+    "saveSubs": "Save Subscriptions",
+    "saveSubsInProgress": "Saving Subscriptions..."
+  }
+}

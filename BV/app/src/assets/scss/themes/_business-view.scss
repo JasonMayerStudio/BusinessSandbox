@@ -1,0 +1,238 @@
+// ---------------------------------------------------------------
+// Brand Colors
+// ---------------------------------------------------------------
+// These colors are abstracted so that the $colors Sass map
+// below can be easily themeable. These variables shouldn't
+// be used in the Sass that is output. Use the values from the
+// Sass map below.
+
+// Primary Colors
+$xx-dark-blue: #00355e; // Secondary blue, also used for visualizations
+$x-dark-blue: #06477c;
+$dark-blue: #0a61ad;
+$blue: #007dc3; // Primary blue, also used for visualizations
+$light-blue: #139ceb;
+$x-light-blue: #21b7ff;
+$xx-light-blue: #b3dfff;
+
+// Secondary Colors (primarily used for visualizations & alerts)
+// Visualizations
+$purple: #644a94;
+$teal: #77c9c0;
+
+// Alerts
+$green: #5aa832; // Also used for visualizations, positive result
+$red: #d31c3c; // Also used for visualizations, negative result
+$orange: #ec9a2f;
+
+// Grays
+$xx-dark-gray: #222129;
+$x-dark-gray: #3a3c44;
+$dark-gray: #565963;
+$gray: #7c7c89;
+$light-gray: #9a9fac;
+$x-light-gray: #c6c9d1;
+$xx-light-gray: #e3e7ea;
+$border-gray: #d7dce1;
+
+// Misc
+$black: #000;
+$white: #fff;
+$off-white: #f2f2f2;
+$light-muted-blue: #f8f9fc;
+$muted-blue: #f0f3f4;
+$dark-muted-blue: #d7dce1;
+$disabled: #efefef;
+$shadow: rgba(0, 0, 0, .2);
+$gold: #f5a623;
+$gold-light: #fff8d9;
+
+// Sass map with branded colors. These are the values that should
+// be used in any Sass files.
+// Call these in your Sass with (defaults to the color in 'base'):
+//
+//  Usage:
+//     background-color: brand-color(primary, dark) ;
+
+$colors: (
+  primary: (
+    base: $blue,
+    light: $light-blue,
+    x-light: $x-light-blue,
+    xx-light: $xx-light-blue, // There is no xx-light for this theme
+    dark: $dark-blue,
+    x-dark: $x-dark-blue,
+    xx-dark: $xx-dark-blue
+  ),
+  // There is no secondary color set for this theme
+  secondary: (
+    base: $gray,
+    light: $light-gray,
+    x-light: $x-light-gray,
+    xx-light: $x-light-gray,
+    dark: $dark-gray,
+    x-dark: $x-dark-gray,
+    xx-dark: $xx-dark-gray
+  ),
+  // There is no tertiary color set for this theme
+  tertiary: (
+    base: $gray,
+    light: $light-gray,
+    x-light: $x-light-gray,
+    xx-light: $x-light-gray,
+    dark: $dark-gray,
+    x-dark: $x-dark-gray,
+    xx-dark: $xx-dark-gray
+  ),
+  gray: (
+    base: $gray,
+    light: $light-gray,
+    x-light: $x-light-gray,
+    xx-light: $xx-light-gray,
+    dark: $dark-gray,
+    x-dark: $x-dark-gray,
+    xx-dark: $xx-dark-gray,
+    border: $border-gray
+  ),
+  muted: (
+    base: $white,
+    dark: $black,
+    blue: $muted-blue,
+    light-blue: $light-muted-blue,
+    dark-blue: $dark-muted-blue
+  ),
+  alert: (
+    info: $gray,
+    success: $green,
+    warning: $orange,
+    danger: $red
+  ),
+  visualzation: (
+    option-1: $blue,
+    option-2: $xx-dark-blue,
+    option-3: $teal,
+    option-4: $purple
+  )
+);
+
+// ---------------------------------------------------------------
+// Spacing
+// ---------------------------------------------------------------
+// Generates a Sass map to handle the spacing specific to margin
+// and padding. Calculations are using a modular scale, not linear.
+// $spacing: (
+//   xxs: -,
+//   xs: -,
+//   s: -,
+//   m: -,
+//   l: -,
+//   xl: -,
+//   xxl: -,
+// );
+//
+// Usage:
+//   margin-bottom: spacing(s);
+//   padding: spacing(xl);
+// ---------------------------------------------------------------
+// $modular-spacing-base-size: 2px;
+// @each $size in $modular-scale-sizes {
+//   $i: index($modular-scale-sizes, $size);
+//   $spacing: (
+//     $size: calculateModularScale($i, $modular-spacing-base-size),
+//   );
+// }
+// Temporary solution
+$spacing-scale: (
+  none: 0,
+  xxs: 2px,
+  xs: 4px,
+  s: 8px,
+  m: 16px,
+  l: 24px,
+  xl: 32px,
+  xxl: 48px,
+);
+
+// ---------------------------------------------------------------
+// Fonts
+// ---------------------------------------------------------------
+$heading-font-family: Roboto, sans-serif;
+$body-font-family: Roboto, sans-serif;
+
+// ---------------------------------------------------------------
+// Generates a Sass map to handle the spacing specific to font
+// sizes. Calculations are using a modular scale, not linear.
+// $font-scale: (
+//   xxs: -,
+//   xs: -,
+//   s: -,
+//   m: -,
+//   l: -,
+//   xl: -,
+//   xxl: -,
+// );
+//
+// Usage:
+//   font-size: font-size(m);
+// ---------------------------------------------------------------
+// $modular-font-base-size: 1em;
+// @each $size in $modular-scale-sizes {
+//   $i: index($modular-scale-sizes, $size);
+//   $font-size: (
+//     $size: calculateModularScale(nth($modular-scale-index, $i), $modular-font-base-size),
+//   );
+// }
+
+$base-font-size: 14px; // Updated on the root HTML of the document. All other font sizes adjust accordingly.
+
+// Temporary solution (font-size, line-height)
+$font-scale: (
+  xxs: (0.5714285714em, 1.25),
+  xs: (0.7142857143em, 1.25),
+  s: (0.8571428571em, 1.3333333333),
+  m: (1em, 1.8),
+  l: (1.1428571429em, 1.25),
+  xl: (1.4285714286em, 1.15),
+  xxl: (1.7142857143em, 1.1)
+);
+
+// ---------------------------------------------------------------
+// Breakpoints
+// ---------------------------------------------------------------
+$breakpoints: (
+  xxs: 320px,
+  xs: 480px,
+  s: 640px,
+  m: 768px,
+  ml: 1023px,
+  l: 1024px,
+  xl: 1480px,
+  xxl: 1600px,
+);
+
+// ---------------------------------------------------------------
+// Component Settings
+// ---------------------------------------------------------------
+// Adjust how big/small badges appear.
+$badge-scale: 30px;
+
+// Button Settings
+$primary-button-height: 40px;
+$secondary-button-height: 30px;
+
+// Field Settings
+$field-border-radius: 2px;
+$field-height: 40px;
+$field-height-compact: 36px;
+
+// Site header height
+$site-header-height: 85px;
+$mobile-site-header-height: 64px;
+
+// Blue bar height
+$blue-bar-height:70px;
+
+// Nav Item Settings
+$nav-item-height: 46px;
+$collapsed-nav-item-width: 69px;
+$mobile-global-selector-height: 48px;

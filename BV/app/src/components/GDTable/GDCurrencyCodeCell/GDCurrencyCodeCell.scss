@@ -1,0 +1,20 @@
+.gd-currency-code-cell {
+  text-align: right;
+
+  @include equal-spacing(s);
+
+  &__value {
+    display: block;
+    font-weight: 500;
+    line-height: 14px;
+  }
+
+  &__currency-code {
+    color: brand-color(gray, light);
+    display: block;
+    font-weight: 400;
+    line-height: 14px;
+
+    @include font-scale(s);
+  }
+}

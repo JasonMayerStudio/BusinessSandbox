@@ -1,0 +1,15 @@
+{
+  "merchantColumns": {
+    "merchantNumber": "Merchant ID",
+    "businessName": "Merchant Name",
+    "fullAddress": "Location Address",
+    "acquirer": "Acquirer"
+  },
+  "userColumns": {
+    "name": "Name",
+    "email": "Email Address",
+    "status": "Status",
+    "roleName": "Role",
+    "acquirer": "Acquirer"
+  }
+}

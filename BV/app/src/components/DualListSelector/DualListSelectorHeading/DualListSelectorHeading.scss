@@ -1,0 +1,27 @@
+.dual-list-selector__heading {
+  @include equal-spacing(m);
+
+  align-items: center;
+  background-color: brand-color(muted, light-blue);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  border-bottom: 1px solid brand-color(gray, x-light);
+
+  h2 {
+    flex: 1;
+    margin: 0;
+    color: brand-color(gray, x-dark);
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .meta {
+    @include font-scale(m);
+
+    color: brand-color(gray);
+    flex: 1;
+    line-height: 1;
+    text-align: right;
+  }
+}

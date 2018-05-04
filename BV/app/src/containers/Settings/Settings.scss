@@ -1,0 +1,80 @@
+.settings {
+
+  &-container {
+    @include equal-spacing(l);
+
+    &:focus {
+      outline: none;
+    }
+
+    h4 {
+      margin-bottom: 24px;
+    }
+
+    .panel.personal-info {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .panel.preferences,
+    .panel.email-subscriptions {
+      flex-direction: column;
+    }
+
+    .field {
+      @include stack(l);
+    }
+  }
+
+  &-name {
+    @include font-scale(xl);
+    border: 0;
+    line-height: 1.5;
+    font-weight: 200;
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+    width: 250px;
+
+    // not using the %placeholder mixin here because this component was build to use the placeholder as its value
+    &:focus::placeholder {
+      color: brand-color(gray, light);
+    }
+
+    &::placeholder {
+      color: black;
+    }
+  }
+
+  &-role {
+    color: brand-color(gray, light);
+    font-weight: 300;
+    margin: 0;
+
+    @include font-scale(s);
+  }
+}
+
+.panel {
+
+  &.personal-info {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 112px;
+    padding-top: spacing(m);
+
+    @include equal-spacing(l);
+
+    button {
+      margin-top: spacing(m);
+    }
+  }
+}
+
+@include breakpoint(m) {
+
+  .settings-name {
+    width: 350px;
+  }
+}

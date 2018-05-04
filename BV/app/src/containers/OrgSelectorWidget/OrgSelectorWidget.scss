@@ -1,0 +1,40 @@
+.org-selector-widget {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  > .button {
+    margin-top: 8px;
+    min-width: 150px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+    text-transform: none;
+  }
+
+  &-autocomplete {
+    min-width: 235px;
+    position: absolute;
+    top: 100%;
+    // @desc this item should appear above most content on the page
+    z-index: 15;
+  }
+
+  .selection-list {
+    max-height: 50vh;
+    overflow-x: auto;
+  }
+
+  button:after {
+    border-bottom: 5px solid transparent;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid;
+    content: '';
+    display: inline-block;
+    margin-left: 3px;
+    position: absolute;
+    right: spacing(m);
+    top: 67%;
+  }
+}

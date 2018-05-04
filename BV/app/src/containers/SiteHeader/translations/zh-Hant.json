@@ -1,0 +1,16 @@
+{
+  "siteHeader": {
+    "Account User": "帳戶用戶",
+    "Tech Support Admin": "技術支持管理員",
+    "Account Admin": "帳戶管理員",
+    "Internal Employee": "內部員工",
+    "Regional PM": "區域總理",
+    "Worldwide PM": "全球PM",
+    "Customer Service": "客戶服務",
+    "Masterfile Analyst": "主文件分析師",
+    "Acquirer User": "收購方用戶",
+    "Acquirer Admin": "收購者管理員",
+    "viewProfile": "查看資料",
+    "logout": "登出"
+  }
+}

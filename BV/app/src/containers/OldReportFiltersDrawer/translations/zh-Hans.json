@@ -1,0 +1,10 @@
+{
+  "reportFilters": {
+    "title": "过滤",
+    "savedFilters": "保存过滤器",
+    "selectFilter": "选择过滤器",
+    "noSavedFilters": "没有保存过滤器",
+    "applyFilters": "申请过滤器",
+    "filterName": "过滤器名称"
+  }
+}

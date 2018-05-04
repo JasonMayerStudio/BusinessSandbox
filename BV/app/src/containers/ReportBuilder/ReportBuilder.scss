@@ -1,0 +1,22 @@
+.custom-report-section {
+
+  .go-back-button {
+    padding-bottom: 24px;
+
+    .button-link {
+      padding: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .summary-box {
+    min-width: 320px;
+    margin-left: spacing(l);
+  }
+}

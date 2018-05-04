@@ -1,0 +1,140 @@
+// Main Switch Button container
+
+.switch-button {
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 100%;
+  margin: 0;
+  margin-left: spacing(m);
+  position: relative;
+  vertical-align: middle;
+
+  label {
+    cursor: pointer;
+  }
+
+  &.disabled {
+
+    label {
+      color: brand-color(gray, light);
+      cursor: not-allowed;
+    }
+  }
+
+  // Hide the default input checkbox
+  input[type='checkbox'] {
+    margin-left: -9999px;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  // Default left label
+  > label:first-child {
+    display: inline;
+    margin-right: spacing(s);
+    position: relative;
+    z-index: 0;
+  }
+
+  // Right label
+  label + label {
+    margin-left: spacing(s);
+  }
+
+  input[type='checkbox'] + label {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    outline: none;
+    position: relative;
+    user-select: none;
+  }
+
+  &.flatsquare input[type='checkbox'] + label {
+    background-color: brand-color(gray, x-light);
+    border-radius: 3px;
+    height: 32px;
+    padding: 2px;
+    transition: background 400ms ease-in;
+    vertical-align: middle;
+    width: 50px;
+    z-index: 0;
+  }
+
+  &.flatsquare input[type='checkbox']:checked + label {
+    background-color: brand-color(alert, success);
+  }
+
+  &.flatsquare.disabled input[type='checkbox'] + label {
+    background-color: $disabled;
+  }
+
+  &.flatsquare:hover input[type='checkbox'] + label {
+    border-color: brand-color(primary, base);
+  }
+
+  &.flatsquare input[type='checkbox'] + label:before,
+  &.flatsquare input[type='checkbox'] + label:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+  }
+
+  // inner background
+  &.flatsquare input[type='checkbox'] + label:before {
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    top: 4px;
+    transition: background 400ms ease-in;
+    z-index: 0;
+  }
+
+  &.flatsquare input[type='checkbox']:checked + label:after,
+  &.flatsquare input[type='checkbox'] + label:after {
+    background-color: white;
+  }
+
+  // moving block
+  &.flatsquare input[type='checkbox'] + label:after {
+    @include font-scale(xs);
+
+    border-radius: 2px;
+    bottom: 4px;
+    color: white;
+    left: 4px;
+    line-height: 24px;
+    text-align: center;
+    top: 4px;
+    transition: margin 400ms ease-in, background 400ms ease-in;
+    width: 20px;
+    z-index: 2;
+  }
+
+  &.flatsquare.disabled input[type='checkbox'] + label:after {
+    background-color: white;
+  }
+
+  &.flatsquare:hover input[type='checkbox']:checked + label:before {
+    border-color: brand-color(primary, base);
+    transition: border-color 200ms ease-in-out;
+  }
+
+  &.flatsquare.disabled input[type='checkbox']:checked + label {
+    background-color: brand-color(alert, success);
+  }
+
+  &.flatsquare input[type='checkbox']:checked + label:after {
+    @include font-scale(xs);
+
+    font-weight: 500;
+    line-height: 24px;
+    margin-left: 21px;
+    text-align: center;
+  }
+
+  &.flatsquare.disabled input[type='checkbox']:checked + label:after {
+    background-color: white;
+    margin-left: 24px;
+  }
+}

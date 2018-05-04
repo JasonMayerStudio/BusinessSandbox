@@ -1,0 +1,14 @@
+{
+  "navigation": {
+    "dashboard": "Dashboard",
+    "transactions": "Transaction Finder",
+    "disputes": "Disputes",
+    "reports": "Reports",
+    "statements": "Statements",
+    "supplies": "Supplies",
+    "messageCenter": "Message Center",
+    "admin": "Admin",
+    "myEquipment": "My Equipment",
+    "defaultTitleText": "Menu"
+  }
+}

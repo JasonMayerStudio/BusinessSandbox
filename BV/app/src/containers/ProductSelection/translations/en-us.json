@@ -1,0 +1,24 @@
+{
+  "productSelection": {
+    "lookingForMoreFeatures": "Looking for more features?",
+    "title": "BusinessView Product Selection",
+    "customerPlatform": "Customer Platform",
+    "primaryBillingMid": "Primary Billing MID",
+    "additionalProducts": "Additional Products & Services",
+    "finalTotal": "Final Total",
+    "month": "Month",
+    "reset": "Reset",
+    "saveProductChanges": "Save Product Changes",
+    "addOn": "Add-on",
+    "addOns": "Add-ons",
+    "Add-on 1": "Add-on 1",
+    "Add-on 2": "Add-on 2",
+    "monthAbbr": "mo",
+    "off": "OFF",
+    "on": "ON",
+    "currentPlan": "Current Plan",
+    "lite": "Lite",
+    "pro": "Pro",
+    "includes": "Includes"
+  }
+}

@@ -1,0 +1,52 @@
+.gd-table__summary-row {
+  @include offset-spacing(l, m);
+  background-color: brand-color(muted);
+  border-bottom-width: 0;
+  border-color: brand-color(muted, dark-blue);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 1px;
+  user-select: none;
+
+  &-title {
+    font-weight: 300;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-list-item:not(:last-child) {
+    border-right: 1px solid brand-color(muted, dark-blue);
+    margin-right: spacing(l);
+    padding-right: spacing(l);
+  }
+
+  &-list-item-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-list-item-label {
+    @include font-scale(s);
+
+    @include stack(xs);
+
+    color: brand-color(gray, light);
+  }
+
+  &-list-item-amount {
+    @include font-scale(xxl);
+
+    color: brand-color(gray, dark);
+  }
+
+  .primary {
+    color: brand-color(alert, success);
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "personalInfo": {
+    "title": "Informations Personnelles",
+    "Account User": "Utilisateur du Compte",
+    "Tech Support Admin": "Administrateur de Support Technique",
+    "Account Admin": "Administrateur de Compte",
+    "Internal Employee": "Employé Interne",
+    "Regional PM": "PM Régional",
+    "Worldwide PM": "PM mondial",
+    "Customer Service": "Service à la Clientèle",
+    "Masterfile Analyst": "Analyste de fichiers maîtres",
+    "Acquirer User": "Utilisateur Acquéreur",
+    "Acquirer Admin": "Acquéreur Administrateur",
+    "editButton": "Modifier",
+    "cancelButton": "Annuler",
+    "saveChangesButton": "Sauvegarder les modifications",
+    "saveChangesProgress": "Enregistrer les modifications..."
+  },
+  "preferences": {
+    "title": "Préférences",
+    "language": "La Langue",
+    "timeFormat": "Format de L'heure",
+    "timeFormat24": "Afficher l'horloge 24 heures sur 24 (16:30)",
+    "timeFormatAmPm": "Montrer AM/PM (4:30pm)",
+    "dateFormat": "Format de Date",
+    "savePrefs": "Enregistrer les Préférences",
+    "savePrefsInProgress": "Enregistre les Préférences..."
+
+  },
+  "emailSubscriptions": {
+    "title": "Abonnements Par Courrier electronique",
+    "Global Payments": "Paiements Globaux",
+    "Latest news and marketing information from Global Payments": "Dernières nouvelles et informations marketing des paiements globaux",
+    "BusinessView Activity Alerts": "Alertes d'activité de vue d'entreprise",
+    "New Statements": "Nouvelle Déclarations",
+    "New Reports": "Nouveaux Rapports",
+    "saveSubs": "Enregistrer les Abonnements",
+    "saveSubsInProgress": "Enregistre les Abonnements..."
+  }
+}

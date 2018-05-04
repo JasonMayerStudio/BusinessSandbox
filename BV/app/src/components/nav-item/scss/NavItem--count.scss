@@ -1,0 +1,16 @@
+.message-count {
+  background-color: brand-color(alert, danger);
+  border-radius: 50%;
+  color: brand-color(muted, base);
+  float: right;
+  font-weight: bold;
+  height: 22px;
+  line-height: 21px;
+  margin-left: spacing(s);
+  text-align: center;
+  width: 23px;
+}
+
+.message-count-collapsed {
+  display: none;
+}

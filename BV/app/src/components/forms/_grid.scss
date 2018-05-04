@@ -1,0 +1,19 @@
+.field-group-vertical {
+  display: flex;
+  flex-direction: column;
+
+  .field {
+    @include stack(m);
+
+    display: flex;
+    flex-direction: column;
+
+    &--fixed-width {
+      width: 215px;
+    }
+  }
+
+  .field .field-label {
+    @include stack(s);
+  }
+}

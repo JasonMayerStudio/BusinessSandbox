@@ -1,0 +1,36 @@
+// ---------------------------------------------------------------
+// Function to calculate padding/margin and type values based on
+// a modular scale. Valued are generated as a Sass map
+// in the _theme.scss files
+// ---------------------------------------------------------------
+// Ratios
+$ratios: (
+  minor-second: 1.067,
+  major-second: 1.125,
+  minor-third: 1.2,
+  major-third: 1.25,
+  perfect-fourth: 1.333,
+  augmented-fourth: 1.414,
+  perfect-fifth: 1.5,
+  golden-ratio: 1.618
+);
+
+$modular-scale-sizes: xxs xs s m l xl xxl;
+
+@function ratio($ratio) {
+  @return map-get($ratios, $ratio);
+}
+
+// Type Scale - not being used atm...needs a lot of work
+$modular-scale-index: -3 -2 -1 0 1 2 3;
+
+@function calculateModularScale($multiple, $base-size, $ratio: ratio(perfect-fourth)) {
+  @if $multiple == 0 {
+    @return $base-size;
+  } @else if $multiple < 0 {
+    @return ($base-size * $ratio) / $multiple;
+  } @else {
+    @return $base-size * $ratio * $multiple;
+  }
+}
+

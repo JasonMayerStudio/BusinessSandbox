@@ -1,0 +1,23 @@
+{
+  "messageCenter": {
+    "title": "消息中心"
+  },
+  "messageTable": {
+    "type": "類型",
+    "message": "信息",
+    "readStatus": "讀取狀態",
+    "received": "收到"
+  },
+  "messageButtons": {
+    "selectAll": "全選",
+    "markAllAsRead": "標記為已讀",
+    "markAsRead": "標記為已讀",
+    "markAsUnread": "標記為未讀",
+    "clear": "明確"
+  },
+  "selectedText": {
+    "message": "信息",
+    "messages": "消息",
+    "selected": "選"
+  }
+}

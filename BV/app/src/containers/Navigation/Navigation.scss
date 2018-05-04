@@ -1,0 +1,206 @@
+.primary-nav {
+  background-color: brand-color(muted);
+  color: brand-color(gray, light);
+  display: flex;
+  flex: 0 0 250px;
+  flex-direction: column;
+  height: calc(100vh - #{$site-header-height});
+  justify-content: flex-start;
+
+  &__header {
+    align-items: center;
+    background-color: brand-color(primary, x-dark);
+    border-right: 1px solid brand-color(muted);
+    color: #fff;
+    display: flex;
+    height: 70px;
+    flex-flow: row nowrap;
+    font-weight: 700;
+    font-size: 12px;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    line-height: 14px;
+    outline: none;
+    text-transform: uppercase;
+    transition: .2s all ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: brand-color(primary);
+
+      .previous-block {
+        background-color: brand-color(primary);
+      }
+    }
+  }
+
+  &__header-title {
+    @include equal-spacing(m);
+  }
+
+  .previous-block {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: brand-color(primary, light);
+    transition: .2s all ease-in-out;
+
+    .left-pointer-icon {
+      width: 25px !important; // stylelint-disable
+    }
+
+    &.collapsed {
+      border: 0;
+      margin-right: spacing(s);
+      width: 0;
+    }
+
+    &.expanded {
+      border-right: 1px solid #fff;
+      width: $collapsed-nav-item-width;
+    }
+  }
+
+  @include breakpoint(l, max-width) {
+    left: -250px;
+    max-width: 0;
+    position: fixed;
+    top: $site-header-height;
+    transition: all 350ms ease-in;
+    width: 300px;
+    // @desc this item should appear above most content on the page
+    z-index: 15;
+
+    &.navigation-toggled {
+      max-width: 100%;
+      transform: translateX(250px);
+      transition: all 350ms ease-in;
+    }
+
+    @include orientation(landscape) {
+      overflow: scroll;
+    }
+  }
+
+  @include breakpoint(s, max-width) {
+    top: calc(#{$mobile-site-header-height} + #{$mobile-global-selector-height});
+    width: 100%;
+  }
+
+  &-footer {
+    display: block;
+
+    @include breakpoint(l, max-width) {
+      display: none;
+    }
+  }
+
+  &-timestamp {
+    @include font-scale(s);
+
+    @include offset-spacing(s, l);
+
+    background-color: brand-color(gray, xx-dark);
+    display: block;
+  }
+
+  &.with-overlay {
+    // @desc this item should appear above most content on the page
+    z-index: 15;
+
+    @include breakpoint(l) {
+      z-index: -1;
+    }
+  }
+}
+
+.vertical-nav-header {
+  @include offset-spacing(m, l);
+  align-items: center;
+  background-color: brand-color(primary, x-dark);
+  border-right: 1px solid brand-color(muted, base);
+  color: brand-color(muted, base);
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  height: $blue-bar-height;
+
+  &.collapsed {
+
+    .stroke {
+      stroke: brand-color(primary, base);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @include breakpoint(l, max-width) {
+    border-right: none;
+  }
+}
+
+.vertical-nav-header svg {
+  @include inline(xs);
+
+  path {
+    fill: brand-color(muted, base);
+    stroke: brand-color(muted, base);
+  }
+
+  g {
+    fill: brand-color(muted, base);
+    stroke: brand-color(muted, base);
+  }
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  position: relative;
+  border-right: 1px solid brand-color(gray, border);
+
+  @include breakpoint(l, max-width) {
+    border-right: none;
+  }
+}
+
+.vertical-nav {
+  height: 100%;
+  list-style: none;
+  margin-bottom: auto;
+  margin-top: 0;
+  padding-left: 0;
+  width: 100%;
+  z-index: 1;
+
+  &:not(.secondary-nav) {
+
+    &.collapsed {
+      background-color: brand-color(muted, light-blue);
+      border-right: 1px solid brand-color(muted, dark-blue);
+      width: $collapsed-nav-item-width;
+    }
+  }
+}
+
+.secondary-nav {
+  background-color: brand-color(muted);
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 200ms ease-in, width 10ms ease-in;
+  width: 0;
+
+  &.collapsed {
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 200ms ease-in, width 10ms ease-in;
+    width: calc(100% - #{$collapsed-nav-item-width});
+  }
+}
