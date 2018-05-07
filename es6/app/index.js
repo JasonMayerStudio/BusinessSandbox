@@ -1,5 +1,2 @@
-function butter(...a) {
-  return a;
-}
 
-console.log(butter(1, 2, 3));
+console.log(butter(Hello World! from Webpack));
