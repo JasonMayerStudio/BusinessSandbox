@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/JasonMayerStudio/BusinessSandbox#readme",
   "devDependencies": {
-    "webpack": "^4.7.0"
+    "webpack": "^4.7.0",
+    "webpack-cli": "^2.1.3"
   }
 }
