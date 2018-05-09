@@ -1,8 +1,0 @@
-{
-  "columns": {
-    "merchantNumber": "Merchant Id",
-    "hasAccess": "Access?",
-    "dbaName": "DBA Name",
-    "fullAddress": "Location Address"
-  }
-}
