@@ -1,0 +1,16 @@
+.summary-box__footer {
+  @include equal-spacing(m);
+  align-items: center;
+  background-color: brand-color(muted, light-blue);
+  border-top: 1px solid brand-color(gray, x-light);
+  display: flex;
+  justify-content: space-between;
+
+  .button {
+    width: 100%;
+  }
+
+  .button-hollow:first-of-type {
+    margin-right: spacing(s);
+  }
+}

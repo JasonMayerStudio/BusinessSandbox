@@ -1,0 +1,103 @@
+.radio-button {
+  opacity: 0; // hide it
+  position: absolute; // take it out of document flow
+
+  + label {
+    cursor: pointer;
+    left: 22px;
+    letter-spacing: 0.4px;
+    padding-bottom: spacing(xs);
+    padding-top: spacing(xs);
+    position: relative;
+    user-select: none;
+  }
+
+  // Styles for all pseudo check boxes.
+  + label:before,
+  &:checked[disabled] + label:after,
+  &:checked:not([disabled]) + label:after,
+  &:disabled + label:before {
+    background-image: url('./radio-buttons.svg');
+    background-repeat: no-repeat;
+    content: '';
+    left: -25px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    position: absolute;
+    top: 2px;
+  }
+
+  // Unchecked, not disabled
+  + label:before {
+    background-position-x: -20px;
+  }
+
+  // Checked
+  &:checked + label:before {
+    background-image: none;
+  }
+
+  // Checked and not disabled
+  &:checked:not([disabled]) + label:after {
+    left: -24px;
+  }
+
+  // Read only
+  &:checked[disabled] + label:after {
+    background-position-x: -61px;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: brand-color(gray, x-light);
+    cursor: not-allowed;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    background-position-x: -41px;
+  }
+
+  &-label {
+    color: brand-color(gray, light);
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  &-label.checked {
+    color: brand-color(gray, x-dark);
+  }
+}
+
+.field-group-vertical .radio-button-group {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 350px);
+}
+
+.radio-button-group-parent-label {
+  @include stack(s);
+  display: block;
+}
+
+.radio-button-field {
+  @include font-scale(s);
+
+  @include equal-spacing(s);
+
+  border-bottom: 1px solid brand-color(gray, xx-light);
+
+  .information-bubble__wrapper {
+    @include font-scale(l);
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.radio-button-list {
+  background-color: #fff;
+  border: 1px solid brand-color(gray, xx-light);
+  overflow: scroll;
+}

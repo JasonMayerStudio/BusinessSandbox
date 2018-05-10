@@ -1,0 +1,10 @@
+.reports-filter-drawer {
+
+  .select-menu__form {
+    @include stack(l);
+
+    &:after {
+      top: 25%;
+    }
+  }
+}

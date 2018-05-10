@@ -1,0 +1,12 @@
+.information-icon {
+  fill: brand-color(gray, light);
+
+  &:hover {
+    cursor: pointer;
+    fill: brand-color(gray, x-dark);
+  }
+}
+
+text {
+  pointer-events: none;
+}

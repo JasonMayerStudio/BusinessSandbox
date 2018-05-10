@@ -1,0 +1,10 @@
+{
+  "reportFilters": {
+    "title": "過濾",
+    "savedFilters": "保存过滤器",
+    "selectFilter": "選擇過濾器",
+    "noSavedFilters": "沒有保存過濾器",
+    "applyFilters": "申請過濾器",
+    "filterName": "過濾器名稱"
+  }
+}

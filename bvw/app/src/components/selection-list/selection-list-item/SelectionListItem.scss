@@ -1,0 +1,27 @@
+.selection-list-item {
+  @include offset-spacing(s, m);
+
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid brand-color(gray, xx-light);
+  display: flex;
+  justify-content: space-between;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.selection-list-item-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.selection-list-item-main {
+  font-weight: bold;
+}
+
+.checkmark-green {
+  color: brand-color(alert, success);
+}

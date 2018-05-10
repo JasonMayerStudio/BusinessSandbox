@@ -1,0 +1,18 @@
+.summary-box__section {
+  @include equal-spacing(m);
+
+  align-items: flex-start;
+  border-top: 1px solid brand-color(gray, x-light);
+  display: flex;
+  justify-content: space-between;
+
+  &:first-child {
+    border-top: 0;
+  }
+
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,24 @@
+.gd-table {
+  @include stack(m);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  padding: 0;
+
+  .ball-sync-loader {
+    min-height: 280px;
+  }
+
+  &__footer-left {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+
+    .select-menu {
+      margin-right: spacing(m);
+    }
+  }
+}

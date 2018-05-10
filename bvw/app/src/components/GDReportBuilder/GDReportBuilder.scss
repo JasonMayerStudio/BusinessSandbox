@@ -1,0 +1,37 @@
+.gd-report-builder {
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+
+  &__wrapper {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    @include equal-spacing(l);
+  }
+
+  /* stylelint-disable-next-line */
+  .report-type .dropdown-menu-trigger span {
+    color: brand-color(gray, x-dark);
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .summary-box {
+    min-width: 320px;
+    margin-left: spacing(l);
+  }
+
+  .field-input.default-textarea {
+    color: brand-color(gray, x-dark);
+    font-size: 12px;
+    font-weight: 500;
+    min-height: 90px;
+    padding: 0 spacing(m);
+  }
+}

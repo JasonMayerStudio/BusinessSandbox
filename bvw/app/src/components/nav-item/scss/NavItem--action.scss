@@ -1,0 +1,165 @@
+.vertical-nav-action {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  height: $nav-item-height;
+  justify-content: flex-start;
+  position: relative;
+  transition: background-color 200ms ease-in,
+            color 200ms ease-in;
+  width: 100%;
+
+  &:link,
+  &:visited {
+    color: brand-color(gray, light);
+  }
+
+  &:before {
+    background-color: transparent;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background-color 200ms ease-in,
+                width 350ms cubic-bezier(.175, .885, .32, 1.275) 250ms;
+    width: 0;
+  }
+
+  g {
+    opacity: 1;
+  }
+
+  .fill {
+    fill: brand-color(gray, light);
+  }
+
+  .stroke {
+    stroke: brand-color(gray, light);
+  }
+
+  &.collapsed .message-count-collapsed {
+    display: block;
+    float: none;
+    height: 12px;
+    margin-left: auto;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    width: 12px;
+  }
+
+  &:hover,
+  &:focus {
+    color: brand-color(gray, dark);
+
+    &:before {
+      background-color: brand-color(primary, base);
+      width: 4px;
+    }
+
+    .opacity {
+      opacity: 1;
+    }
+
+    .fill {
+      fill: brand-color(gray, dark);
+    }
+
+    .stroke {
+      stroke: brand-color(gray, dark);
+    }
+  }
+
+  // primary, top level nav items when nav is not collapsed
+  &-active {
+    background: brand-color(muted, light-blue);
+    color: brand-color(gray, dark);
+
+    &:before {
+      background-color: brand-color(primary, base);
+      width: 4px;
+    }
+
+    &:focus .fill,
+    &:hover .fill {
+      fill: brand-color(gray, dark);
+    }
+
+    &:focus .stroke,
+    &:hover .stroke {
+      stroke: brand-color(gray, dark);
+    }
+
+    .fill {
+      fill: brand-color(gray, dark);
+    }
+
+    .stroke {
+      stroke: brand-color(gray, dark);
+    }
+
+    .opacity {
+      opacity: 1;
+    }
+  }
+}
+
+// primary, top level nav items when nav is collapsed
+.collapsed .vertical-nav-action-active {
+  background-color: brand-color(muted);
+  border-bottom: 1px solid brand-color(muted, dark-blue);
+  border-top: 1px solid brand-color(muted, dark-blue);
+  color: brand-color(primary, base);
+  overflow-x: visible;
+  // we add a pixel to give the overlay effect for active nav items
+  width: calc(#{$collapsed-nav-item-width} + 1px);
+
+  &:before {
+    background-color: transparent;
+    width: 0;
+  }
+
+  &:focus .fill,
+  &:hover .fill {
+    fill: brand-color(primary, base);
+  }
+
+  &:focus .stroke,
+  &:hover .stroke {
+    stroke: brand-color(primary, base);
+  }
+
+  .fill {
+    fill: brand-color(primary, base);
+  }
+
+  .stroke {
+    stroke: brand-color(primary, base);
+  }
+}
+
+.secondary-nav {
+
+  .vertical-nav-action {
+    @include offset-spacing(s, m);
+
+    height: $nav-item-height;
+
+    &-secondary {
+      justify-content: flex-start;
+    }
+
+    &-secondary-active {
+      color: brand-color(gray, x-dark);
+    }
+
+    &-secondary:hover:before,
+    &-secondary:focus:before,
+    &-secondary-active:hover:before,
+    &-secondary-active:focus:before,
+    &-secondary-active::before {
+      background-color: transparent;
+    }
+  }
+}

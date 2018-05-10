@@ -1,0 +1,256 @@
+.dual-calendar {
+  background-color: brand-color(muted);
+  padding-top: spacing(s);
+
+  &__top {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__pairs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__inputs {
+
+    input {
+      width: 230px;
+      height: 40px;
+      border: 1px solid brand-color(muted, dark-blue);
+
+      @include equal-spacing(m);
+      font-weight: 500;
+
+      &:first-of-type {
+        margin-right: spacing(m);
+      }
+    }
+
+    .field-group-vertical {
+      display: inline-flex;
+
+      &:first-child {
+        margin-right: spacing(s);
+      }
+    }
+  }
+
+  // base styles for styling the 3rd-party DateRange widget
+  .rdr-DateRange {
+    background: brand-color(muted);
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  .rdr-PredefinedRanges {
+    display: inline-block;
+    margin: 10px spacing(m) 0 10px;
+    width: 228px;
+  }
+
+  .rdr-PredefinedRangesItem {
+    background-color: brand-color(muted, light-blue);
+    border: 1px solid brand-color(muted, dark-blue);
+    color: brand-color(gray, x-dark);
+    display: block;
+    font-family: $body-font-family;
+    font-weight: 500;
+    margin-bottom: 6px;
+    padding: 10px 14px;
+    text-align: start;
+    width: 100%;
+  }
+
+  .rdr-PredefinedRangesItemActive {
+    background-color: brand-color(muted);
+    border: 1px solid brand-color(primary);
+    color: brand-color(primary);
+  }
+
+  .rdr-Calendar {
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    background: brand-color(muted);
+    border-radius: 2px;
+    display: inline-block;
+    letter-spacing: 0;
+    padding: 10px;
+    width: 248px;
+
+    .rdr-MonthAndYear {
+
+      &-month {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      &-divider,
+      &-year {
+        display: none;
+      }
+
+      /* stylelint-disable max-nesting-depth, selector-max-compound-selectors */
+      &-button {
+        background-color: brand-color(muted);
+
+        i { display: none; }
+
+        &:hover {
+          color: white;
+          border-color: brand-color(primary);
+          cursor: pointer;
+        }
+      }
+      /* stylelint-enable max-nesting-depth, selector-max-compound-selectors */
+
+      &-button.prev {
+        background: no-repeat center;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5cHgiIGhlaWdodD0iMTRweCIgdmlld0JveD0iMCAwIDkgMTQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+QXJyb3c8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUmVwb3J0cy12Mi0oaXRlcmF0aW9uKS12YXJpYW50LTItLS1SZXBvcnQtRmlsdGVycy1PcGVuLS0tRGF0ZS1SYW5nZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU1OS4wMDAwMDAsIC01MjkuMDAwMDAwKSI+ICAgICAgICA8ZyBpZD0iQnVpbGRlciIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU1LjAwMDAwMCwgMjQ0LjAwMDAwMCkiIGZpbGw9IiMwRjdEQzQiPiAgICAgICAgICAgIDxnIGlkPSJTZWN0aW9uLTMtKG9wZW4pIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgMTMwLjAwMDAwMCkiPiAgICAgICAgICAgICAgICA8ZyBpZD0iRGF0ZS1TZWxlY3RvciIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjUuMDAwMDAwLCA2OS4wMDAwMDApIj4gICAgICAgICAgICAgICAgICAgIDxnIGlkPSJOZXctQ2FsZW5kYXItKHdpdGgtYm90dG9tLWJhcikiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCA2My4wMDAwMDApIj4gICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iU3VwZXItRGF0ZS1QaWNrZXIiPiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iQ2FsZW5kYXIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI2OC4wMDAwMDAsIDE0LjAwMDAwMCkiPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9IkJ1dHRvbi13Ly1BcnJvdyI+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9IkFycm93IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNS41MDAwMDAsIDE2LjAwMDAwMCkgcm90YXRlKC0yNzAuMDAwMDAwKSB0cmFuc2xhdGUoLTE1LjUwMDAwMCwgLTE2LjAwMDAwMCkgdHJhbnNsYXRlKDguNTAwMDAwLCAxMS41MDAwMDApIj4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHJlY3QgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNC4zODkwODcsIDQuNTU1NTU2KSByb3RhdGUoLTMxNS4wMDAwMDApIHRyYW5zbGF0ZSgtNC4zODkwODcsIC00LjU1NTU1NikgIiB4PSItMC4xMTA5MTI3MDMiIHk9IjMuOTM4MjcxNiIgd2lkdGg9IjkiIGhlaWdodD0iMS4yMzQ1Njc5Ij48L3JlY3Q+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwLjI0MjY0MSwgNC4yMzc4MjgpIHNjYWxlKC0xLCAxKSByb3RhdGUoLTMxNS4wMDAwMDApIHRyYW5zbGF0ZSgtMTAuMjQyNjQxLCAtNC4yMzc4MjgpICIgeD0iNS43NDI2NDA2OSIgeT0iMy42MjA1NDQwNiIgd2lkdGg9IjkiIGhlaWdodD0iMS4yMzQ1Njc5Ij48L3JlY3Q+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2c+ICAgICAgICAgICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgICAgICA8L2c+ICAgICAgICAgICAgPC9nPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+');
+      }
+
+      &-button.next {
+        background: no-repeat center;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5cHgiIGhlaWdodD0iMTRweCIgdmlld0JveD0iMCAwIDkgMTQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+QXJyb3c8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUmVwb3J0cy12Mi0oaXRlcmF0aW9uKS12YXJpYW50LTItLS1SZXBvcnQtRmlsdGVycy1PcGVuLS0tRGF0ZS1SYW5nZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwMzcuMDAwMDAwLCAtNTI5LjAwMDAwMCkiPiAgICAgICAgPGcgaWQ9IkJ1aWxkZXIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1NS4wMDAwMDAsIDI0NC4wMDAwMDApIiBmaWxsPSIjMEY3REM0Ij4gICAgICAgICAgICA8ZyBpZD0iU2VjdGlvbi0zLShvcGVuKSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDEzMC4wMDAwMDApIj4gICAgICAgICAgICAgICAgPGcgaWQ9IkRhdGUtU2VsZWN0b3IiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1LjAwMDAwMCwgNjkuMDAwMDAwKSI+ICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iTmV3LUNhbGVuZGFyLSh3aXRoLWJvdHRvbS1iYXIpIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgNjMuMDAwMDAwKSI+ICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9IlN1cGVyLURhdGUtUGlja2VyIj4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9IkNhbGVuZGFyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjguMDAwMDAwLCAxNC4wMDAwMDApIj4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSJCdXR0b24tdy8tQXJyb3ciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ3Ny4wMDAwMDAsIDAuMDAwMDAwKSI+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9IkFycm93IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNi41MDAwMDAsIDE2LjAwMDAwMCkgc2NhbGUoLTEsIDEpIHJvdGF0ZSgtMjcwLjAwMDAwMCkgdHJhbnNsYXRlKC0xNi41MDAwMDAsIC0xNi4wMDAwMDApIHRyYW5zbGF0ZSg5LjUwMDAwMCwgMTEuNTAwMDAwKSI+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IHRyYW5zZm9ybT0idHJhbnNsYXRlKDQuMzg5MDg3LCA0LjU1NTU1Nikgcm90YXRlKC0zMTUuMDAwMDAwKSB0cmFuc2xhdGUoLTQuMzg5MDg3LCAtNC41NTU1NTYpICIgeD0iLTAuMTEwOTEyNzAzIiB5PSIzLjkzODI3MTYiIHdpZHRoPSI5IiBoZWlnaHQ9IjEuMjM0NTY3OSI+PC9yZWN0PiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8cmVjdCB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC4yNDI2NDEsIDQuMjM3ODI4KSBzY2FsZSgtMSwgMSkgcm90YXRlKC0zMTUuMDAwMDAwKSB0cmFuc2xhdGUoLTEwLjI0MjY0MSwgLTQuMjM3ODI4KSAiIHg9IjUuNzQyNjQwNjkiIHk9IjMuNjIwNTQ0MDYiIHdpZHRoPSI5IiBoZWlnaHQ9IjEuMjM0NTY3OSI+PC9yZWN0PiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4gICAgICAgICAgICAgICAgICAgIDwvZz4gICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgIDwvZz4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==');
+      }
+
+      &-innerWrapper {
+        @include stack(m);
+
+        padding: 0;
+        height: 34px; // size of the height of the button
+        line-height: 34px;
+      }
+    }
+
+    .rdr-WeekDays {
+      @include stack(s);
+
+      border-bottom: 1px solid brand-color(muted, dark-blue);
+      padding-bottom: spacing(s);
+    }
+  }
+
+  .rdr-MonthAndYear-innerWrapper {
+    font-size: 12px;
+    height: 38px;
+    line-height: 18px;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .rdr-WeekDay {
+    color: brand-color(gray);
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    height: 18.5714px;
+    letter-spacing: initial;
+    line-height: 18.5714px;
+    margin-bottom: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    width: spacing(xl);
+  }
+
+  .rdr-MonthAndYear-button {
+    background: rgb(189, 195, 199);
+    border: 1px solid brand-color(gray, border);
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    height: 30px;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    width: 30px;
+  }
+
+  .rdr-MonthAndYear-button.prev {
+    float: left;
+  }
+
+  .rdr-MonthAndYear-button.next {
+    float: right;
+  }
+
+  .rdr-Days span {
+    display: inline-block;
+    height: spacing(xl);
+    width: spacing(xl);
+  }
+
+  .rdr-Day {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    height: spacing(xl);
+    letter-spacing: initial;
+    line-height: spacing(xl);
+    text-align: center;
+    transition: transform 0.1s ease;
+    width: spacing(xl);
+  }
+
+  .rdr-Day:hover {
+    background-color: rgb(189, 195, 199);
+  }
+
+  .rdr-Day:active {
+    background-color: rgb(149, 165, 166);
+    color: brand-color(muted);
+    transform: scale(0.9);
+  }
+
+  .rdr-Day.is-passive {
+    color: brand-color(muted);
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+
+  .rdr-Day.is-passive.is-inRange {
+    color: brand-color(muted, dark);
+  }
+
+  .rdr-Day.is-selected {
+    background-color: brand-color(primary);
+    color: brand-color(muted);
+  }
+
+  .rdr-Day.is-selected.is-passive {
+    background-color: inherit;
+  }
+
+  .is-inRange {
+    background-color: brand-color(muted, light-blue);
+    border-bottom: 1px solid brand-color(gray, border);
+    border-top: 1px solid brand-color(gray, border);
+    color: brand-color(muted, dark);
+    font-weight: 700;
+  }
+
+
+  .selectedDateInput {
+    display: inline-block;
+    font-size: 16px;
+    margin: 16px;
+    min-width: 250px;
+    padding: 8px;
+  }
+
+  &__footer {
+    @include equal-spacing(m);
+
+    align-items: center;
+    border-top: 1px solid brand-color(muted, dark-blue);
+    background-color: brand-color(muted, light-blue);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+  }
+
+  &__footer .button.button-small {
+    @include offset-spacing(xs, l);
+  }
+}

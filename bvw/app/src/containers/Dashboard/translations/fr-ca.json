@@ -1,0 +1,15 @@
+{
+  "dashboard": {
+    "title": "Tableau de Bord",
+    "currency": "Devise",
+    "searchCurrencies": "Rechercher des Devises",
+    "upgradeToPro1": "Votre version de Business View vous donne uniquement accès à trois mois de données de transaction.",
+    "upgradeToPro2": "S'il vous plaît ",
+    "upgradeToPro3": "améliorez votre sélection de produits",
+    "upgradeToPro4": " pour voir plus de données ou contactez votre administrateur pour le faire.",
+    "yesterday": "Hier",
+    "lastWeek": "La Semaine Dernière",
+    "lastMonth": "Le Mois Dernier",
+    "lastYear": "L'année Dernière"
+  }
+}

@@ -1,0 +1,222 @@
+.help-widget {
+
+  &-wrapper {
+    align-items: flex-end;
+    bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    left: 65px;
+    position: fixed;
+    // @desc this item should appear above most content on the page, but lower than popups
+    //    popups are at 15
+    z-index: 10;
+  }
+
+  &-wrapper.offset {
+    right: 415px;
+  }
+
+  &-button {
+    background-color: rgba(58, 61, 70, 0.7);
+    border: 0;
+    border-radius: 100px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    cursor: pointer;
+    font-family: $body-font-family;
+    padding: 12px 24px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:before {
+      content: url('./img/question.svg');
+    }
+  }
+
+  &-button.active {
+    background-color: rgba(58, 61, 70, 1);
+  }
+
+  &-cta {
+    vertical-align: top;
+
+    @include font-scale(l);
+
+    @include equal-spacing(s);
+  }
+
+  &-topics {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.1);
+    bottom: 10px;
+    min-height: 160px;
+    position: relative;
+    width: 300px;
+  }
+}
+
+.help-widget-topics-header {
+  background-color: brand-color(gray, base);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+  @include offset-spacing(s, m);
+
+  .header {
+    @include font-scale(l);
+
+    color: white;
+    display: inline;
+  }
+
+  .page-path {
+    @include font-scale(xs);
+
+    background-color: brand-color(gray, x-dark);
+    border-radius: 4px;
+    bottom: 3px;
+    color: white;
+
+    margin-left: spacing(s);
+    padding: 2px 5px;
+    position: relative;
+    text-transform: uppercase;
+  }
+}
+
+.help-widget-topics-body {
+  @include equal-spacing(m);
+
+  .help-topics {
+    @include font-scale(xs);
+
+    color: brand-color(gray, base);
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include stack(m);
+  }
+
+  .help-topic {
+    color: brand-color(primary, base);
+    cursor: pointer;
+    display: block;
+
+    @include stack(m);
+  }
+
+  .divider {
+    border-color: brand-color(gray, xx-light);
+    border-style: solid;
+
+    @include stack(s);
+  }
+
+  .go-to-help {
+    color: rgba(58, 61, 70, 1);
+    cursor: pointer;
+
+    @include stack(s);
+  }
+}
+
+.help-widget-enter {
+  opacity: 0.01;
+}
+
+.help-widget-enter.help-widget-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
+.help-widget-leave {
+  opacity: 1;
+}
+
+.help-widget-leave.help-widget-leave-active {
+  opacity: 0.01;
+  transition: opacity 250ms ease-in;
+}
+
+@include breakpoint(l) {
+
+  .help-widget-wrapper.navigationview {
+    display: none;
+  }
+}
+
+@include breakpoint(l, max-width) {
+
+  .help-widget-wrapper.desktopview {
+    display: none;
+  }
+
+  .help-widget-wrapper.navigationview {
+    align-items: flex-end;
+    bottom: auto;
+    color: black;
+    display: inline-flex;
+    flex-direction: column;
+    position: fixed;
+    right: spacing(l);
+    top: spacing(l);
+    // @desc this item should appear above most content on the page, like a popup
+    //    popups are at 15
+    z-index: 15;
+
+    .help-widget-button:before {
+      content: url('./img/question-dark.svg');
+    }
+
+    .help-widget-button {
+      background-color: transparent;
+      border: 0;
+      border-radius: none;
+      box-shadow: none;
+      color: white;
+      cursor: pointer;
+      font-family: $body-font-family;
+      padding: 0;
+    }
+
+    .help-widget-cta { display: none; }
+
+    .help-widget-topics {
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.1);
+      display: inline-flex;
+      flex-flow: column nowrap;
+      position: absolute;
+      right: 0;
+      top: spacing(l);
+      width: calc(100vw - 64px);
+    }
+
+    .help-widget-topics-body {
+      background-color: white;
+    }
+  }
+}
+
+@include breakpoint(m, max-width) {
+
+  .help-widget-wrapper.navigationview {
+
+    .help-widget-topics {
+      width: calc(100vw - 32px);
+    }
+  }
+}
+
+@include breakpoint(s, max-width) {
+
+  .help-widget-wrapper.navigationview {
+    right: spacing(m);
+    top: 20px;
+  }
+}

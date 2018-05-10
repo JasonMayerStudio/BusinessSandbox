@@ -1,0 +1,12 @@
+.information-icon {
+
+
+  &.error {
+
+    fill: brand-color(alert, danger);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

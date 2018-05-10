@@ -1,0 +1,35 @@
+.Frame-header,
+.Frame-handle,
+.Frame-panel--sidebar {
+	display: none;
+}
+
+html,
+body,
+.Frame,
+.Frame-body,
+.Frame-inner {
+	height: auto;
+	overflow: visible;
+	position: static;
+		top: unset;
+		right: unset;
+		bottom: unset;
+		left: unset;
+}
+
+.Document {
+	padding: .5in;
+}
+
+.Prose {
+	max-width: 100%;
+}
+
+ol li div {
+	margin-left: -1.25em
+}
+
+img {
+	max-width: 100%;
+}

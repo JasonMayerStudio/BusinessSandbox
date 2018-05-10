@@ -1,0 +1,315 @@
+.ProductSelection {
+  padding-bottom: spacing(l);
+  padding-top: spacing(l);
+  text-align: center;
+
+  .cta-subheader-text {
+    @include font-spacing($base-font-size, 0, normal);
+    border: 0;
+    color: brand-color(gray, light);
+    font-family: $body-font-family;
+  }
+
+  h1 {
+    @include stack(l);
+  }
+
+  .hidden { display: none; }
+}
+
+.Product-container {
+  @include stack(xl);
+  background-color: white;
+  border: 1px solid brand-color(gray, x-light);
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: left;
+
+  &__header {
+    @include equal-spacing(l);
+    align-items: center;
+    border-bottom: 1px solid brand-color(gray, x-light);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    &-logo {
+      text-align: left;
+
+      span {
+        @include font-scale(s);
+        color: brand-color(gray, light);
+        position: relative;
+        text-transform: uppercase;
+      }
+    }
+
+    &-billing-info {
+      @include font-scale(s);
+      text-align: right;
+      text-transform: uppercase;
+    }
+  }
+
+  &__content {
+    align-items: stretch;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+
+    &-product-panes {
+      align-items: stretch;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+  }
+
+  .ProductPane {
+    border-right: 1px solid brand-color(gray, x-light);
+  }
+}
+
+.Product-container__footer {
+  align-items: center;
+  background-color: brand-color(primary, base);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  &-total,
+  &-actions {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+
+    @include offset-spacing(m, l);
+
+    .svg {
+      fill: brand-color(primary, base);
+    }
+
+    &:hover .svg {
+      fill: white;
+    }
+  }
+
+  &-total {
+    background-color: brand-color(primary, dark);
+    color: white;
+    flex: 1;
+    justify-content: space-between;
+    padding-right: 0;
+
+    &-title {
+      @include stack(s);
+
+      @include font-scale(m);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &-addons {
+      font-size: 12px;
+    }
+
+    &-finalprice {
+      align-items: center;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+
+      .grand-total {
+        @include font-scale(l);
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+      }
+
+      .grand-total-number {
+        font-size: 42px;
+        margin: 0 spacing(s);
+      }
+
+      .currency-per-unit {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &-big-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 45px 0 45px 35px;
+    border-color: transparent transparent transparent brand-color(primary, dark);
+  }
+
+  &-actions {
+    flex: 2;
+    justify-content: flex-end;
+
+    .reset-selection {
+      color: white;
+      text-transform: uppercase;
+      margin-right: spacing(l);
+      cursor: pointer;
+    }
+
+    .button {
+      max-width: 280px;
+    }
+
+    .button svg {
+      fill: brand-color(primary, base);
+    }
+  }
+}
+
+.ProductSelection.drawer-content {
+  padding-top: 0;
+
+  .drawer-heading { border-bottom: 0; }
+
+  .drawer-headline { margin-bottom: 0; }
+
+  .Product-container { border: 0; }
+
+  .Product-container__header {
+    @include offset-spacing(m, l);
+    background-color: brand-color(primary, dark);
+    border: 0;
+    color: white;
+  }
+
+  .Product-container__header-logo span { color: white; }
+
+  .Product-container__content,
+  .Product-container__content-product-panes,
+  .Product-container__footer,
+  .Product-container__footer-actions {
+    flex-flow: column nowrap;
+  }
+
+  .Product-container__content {
+    @include offset-spacing(m, l);
+    background-color: brand-color(muted, blue);
+    padding-bottom: 0;
+  }
+
+  .Product-container__footer {
+    background-color: brand-color(muted, blue);
+
+    &-total {
+      width: 100%;
+      color: brand-color(gray, dark);
+      background-color: brand-color(muted, blue);
+
+      @include offset-spacing(m, l);
+    }
+  }
+
+  .ProductPane,
+  .Product-container__footer-actions,
+  .Product-container__footer-actions button { width: 100%; }
+
+  .Product-container__footer-actions button { max-width: 340px; }
+
+  .ProductPane-services { @include stack(s); }
+
+  .ProductPane-services .row-service {
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+  }
+
+  .ProductPane-services .row-service-option {
+    margin-right: 0;
+    min-width: auto;
+  }
+
+  .ProductPane {
+    border: 0;
+    padding: 0;
+  }
+}
+
+@include breakpoint(l, max-width) {
+
+  .Product-container {
+    max-width: 100%;
+    margin: 0;
+
+    @include stack(l);
+  }
+}
+
+@include breakpoint(m, max-width) {
+
+  .Product-container__content-product-panes {
+    flex-flow: column nowrap;
+
+    .ProductPane {
+      padding-bottom: 0;
+    }
+
+    .ProductPane:last-child {
+      padding-top: 0;
+    }
+  }
+}
+
+@include breakpoint(s, max-width) {
+
+  .Product-container__content-product-panes {
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    .ProductPane:last-child {
+      @include equal-spacing(l);
+      padding-bottom: 0;
+      border-right: 0;
+    }
+  }
+
+  .Product-container__content {
+    flex-flow: column nowrap;
+  }
+
+  .Product-container__footer {
+    flex-flow: column nowrap;
+    align-items: stretch;
+  }
+
+  .Product-container__footer-total {
+    padding-right: spacing(l);
+  }
+
+  .Product-container__footer-big-arrow {
+    display: none;
+  }
+
+  .Product-container__footer-actions {
+    @include equal-spacing(l);
+
+    .button {
+      max-width: 220px;
+    }
+  }
+}
+
+@include breakpoint(xs, max-width) {
+
+  .Product-container__content-product-panes {
+    flex-flow: column nowrap;
+
+    .ProductPane {
+      padding-bottom: 0;
+      border-right: 0;
+      width: 100%;
+    }
+
+    .ProductPane-services {
+      margin-bottom: 0;
+    }
+  }
+}

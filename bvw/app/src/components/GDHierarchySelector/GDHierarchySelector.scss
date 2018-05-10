@@ -1,0 +1,44 @@
+.gd-hierarchy-selector {
+  min-width: 500px;
+
+  .ReactCollapse--collapse {
+    position: absolute;
+    z-index: 15;
+    min-width: 500px;
+    background-color: brand-color(muted);
+  }
+
+  .ReactCollapse--collapse .ReactCollapse--content {
+    border-top: 1px solid brand-color(muted, dark-blue);
+  }
+
+  .button-link-inline {
+    outline-width: 0;
+  }
+
+  &__sub-icon {
+    background-color: brand-color(primary);
+    color: brand-color(muted);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  &__sub-icon-container {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__sub-icon .star-icon,
+  &__sub-icon .search-icon {
+    height: 12px;
+    width: 12px;
+    color: brand-color(muted);
+  }
+}

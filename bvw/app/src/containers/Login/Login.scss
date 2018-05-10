@@ -1,0 +1,48 @@
+.login-landing {
+  align-items: stretch;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+
+  .button.button-primary {
+    @include stack(xs);
+  }
+
+  &:before {
+    background-image: url('../../assets/img/global-reg-bg.jpg');
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.login-panel {
+  justify-content: center;
+  opacity: 1;
+}
+
+.login-description {
+  @include stack(l);
+}
+
+@include breakpoint(xl) {
+
+  .login-landing {
+    max-width: 1440px;
+  }
+}
+
+@include breakpoint(m) {
+
+  .login-landing {
+    width: 100%;
+  }
+}
