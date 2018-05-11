@@ -1,0 +1,91 @@
+export default {
+  auth: {
+    isFetching: false,
+    session: null,
+    error: null,
+  },
+  currentReport: {
+    reportId: 0,
+    data: {},
+    visualizations: [],
+    isFetching: false,
+    lastUpdated: null,
+    error: null,
+  },
+  currentReportDetail: {
+    rowId: 0,
+    data: {},
+    isFetching: false,
+    lastUpdated: null,
+    error: null,
+  },
+  currentReportFilters: [],
+  featureFlags: {},
+  preferences: {
+    isFetching: false,
+    data: {
+      language: 'en-US',
+    },
+    error: null,
+  },
+  subscriptions: {
+    isFetching: false,
+    data: [],
+    error: null,
+  },
+  globalFilter: {
+    filters: [],
+    orgIds: [],
+  },
+  merchants: {
+    data: [],
+    lastMerchantRegistered: null,
+    isFetching: false,
+    lastUpdated: null,
+    error: null,
+  },
+  rolesPermissions: {
+    data: [],
+    isFetching: false,
+    lastUpdated: null,
+    error: null,
+  },
+  reports: {
+    data: [],
+    isFetching: false,
+    lastUpdated: null,
+    error: null,
+  },
+  reportsV2: {
+    data: [],
+    isFetching: false,
+    lastUpdated: null,
+    error: null,
+  },
+  savedReportFilters: {},
+  users: {
+    data: [],
+    isFetching: false,
+    lastUpdated: null,
+    error: null,
+  },
+  messages: {
+    data: [],
+    count: {},
+    isFetching: false,
+    lastUpdated: null,
+    error: null,
+  },
+  statements: {
+    data: [],
+    isFetching: false,
+    lastUpdated: null,
+    error: null,
+  },
+  templates: {
+    data: [],
+    isFetching: false,
+    lastUpdated: null,
+    error: null,
+  },
+};

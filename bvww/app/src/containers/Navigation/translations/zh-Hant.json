@@ -1,0 +1,14 @@
+{
+  "navigation": {
+    "dashboard": "儀表板",
+    "transactions": "交易查找器",
+    "disputes": "爭議",
+    "reports": "報告",
+    "statements": "聲明",
+    "supplies": "耗材",
+    "messageCenter": "消息中心",
+    "admin": "管理員",
+    "myEquipment": "My Equipment",
+    "defaultTitleText": "菜單"
+  }
+}

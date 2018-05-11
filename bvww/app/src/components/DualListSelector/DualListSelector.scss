@@ -1,0 +1,16 @@
+.dual-list-selector {
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+
+  .search {
+    @include offset-spacing(s, m);
+
+    margin: 0;
+  }
+
+  .search-field {
+    width: calc(100% - 25px); // allow for search icon
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "messageCenter": {
+    "title": "Centre de Messagerie"
+  },
+  "messageTable": {
+    "type": "Type",
+    "message": "Message",
+    "readStatus": "Lire L'état",
+    "received": "Reçu"
+  },
+  "messageButtons": {
+    "selectAll": "Tout Sélectionner",
+    "markAllAsRead": "tout marquer comme lu",
+    "markAsRead": "Marquer comme lu",
+    "markAsUnread": "marquer comme non lu",
+    "clear": "clair"
+  },
+  "selectedText": {
+    "message": "Message",
+    "messages": "Messages",
+    "selected": "Choisi"
+  }
+}

@@ -1,0 +1,53 @@
+.range-container {
+  position: relative;
+
+  @include stack(m);
+
+  &__title {
+    @include stack(m);
+
+    flex-basis: 100%;
+    text-transform: uppercase;
+  }
+
+  .field-label {
+    @include stack(s);
+    display: block;
+  }
+}
+
+.range-pair {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  .range-separator {
+    @include font-scale(s);
+
+    @include equal-spacing(s);
+
+    align-self: center;
+    color: brand-color(gray, base);
+    text-transform: uppercase;
+  }
+
+  &.currency-range {
+    justify-content: flex-start;
+  }
+}
+
+.range-field {
+  @include offset-spacing(s, m);
+
+  appearance: none;
+  border: 1px solid brand-color(gray, x-light);
+  box-sizing: border-box;
+  color: brand-color(gray, x-dark);
+  font-family: $body-font-family;
+  min-width: 150px;
+
+  &::placeholder {
+    @extend %placeholder;
+  }
+}

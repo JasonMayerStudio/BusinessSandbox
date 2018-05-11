@@ -1,0 +1,39 @@
+.global-selector-group-small {
+  @include equal-spacing(m);
+
+  @include font-scale(s);
+
+  @include stack(m);
+
+  background-color: white;
+  border: 1px solid brand-color(gray, light);
+  color: brand-color(gray, light);
+  cursor: default;
+  display: block;
+  height: $field-height;
+  overflow: hidden;
+  padding-right: 24px;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: calc(400px - 5.5em); // calculate width of total container minus padding -
+
+  &-wrapper {
+    position: relative;
+  }
+}
+
+.delete-data-access {
+  cursor: pointer;
+  position: absolute;
+  right: calc(100% - 330px);
+  top: 1.25em;
+}
+
+.user-permissions-list .checkbox-field {
+
+  .information-bubble__wrapper {
+    padding: 0;
+    position: relative;
+  }
+}

@@ -1,0 +1,27 @@
+.dual-list-selector__panel {
+  background-color: $white;
+  border: 1px solid brand-color(gray, x-light);
+  display: flex;
+  flex: 1 0 33%;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 0;
+  padding: 0;
+
+  &.double-width {
+    flex: 2 0 66%;
+  }
+
+  &.double-width:last-of-type {
+    border-left: 0;
+  }
+
+  &.available-columns {
+    max-width: 282px;
+  }
+
+  &.available-columns .column-widget {
+    background-color: brand-color(muted, light-blue);
+    max-height: 50px;
+  }
+}

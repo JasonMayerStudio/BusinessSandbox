@@ -1,0 +1,59 @@
+.nav-burger {
+  display: block;
+  position: relative;
+  user-select: none;
+  z-index: 1;
+
+  input {
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    left: -5px;
+    opacity: 0; // hide this
+    position: absolute;
+    top: -7px;
+    -webkit-touch-callout: none;
+    width: 40px;
+    z-index: 2; // place it over the hamburger
+
+    &:checked ~ span {
+      opacity: 0;
+      transform: rotate(0deg) scale(.2, .2);
+    }
+
+    &:checked ~ span:nth-last-child(3) {
+      background-color: brand-color(gray, base);
+      opacity: 1;
+      transform: rotate(45deg) translate(-1.5px, -2px);
+    }
+
+    &:checked ~ span:nth-last-child(2) {
+      background-color: brand-color(gray, base);
+      opacity: 1;
+      transform: rotate(-45deg) translate(-4px, 6px);
+    }
+  }
+
+  span {
+    background-color: brand-color(primary, base);
+    border-radius: 3px;
+    display: block;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    transform-origin: 4px 0;
+    transition: transform 500ms cubic-bezier(.77, .2, .05, 1),
+                background 500ms cubic-bezier(.77, .2, .05, 1),
+                opacity 550ms ease;
+    width: 30px;
+    z-index: 1;
+
+    &:first-child {
+      transform-origin: 0% 0%;
+    }
+
+    &:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+  }
+}

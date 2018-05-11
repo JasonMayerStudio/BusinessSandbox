@@ -1,0 +1,39 @@
+.alert {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  text-transform: none;
+  padding: spacing(s) spacing(m);
+  align-items: center;
+  justify-content: space-between;
+
+  &-success {
+    color: brand-color(muted, blue);
+    background-color: brand-color(alert, success);
+    border-color: brand-color(alert, success);
+  }
+
+  &-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+  }
+
+  &-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+
+  &-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+  }
+
+  &-normal {
+    color: brand-color(gray, x-dark);
+    background-color: brand-color(muted, light-blue);
+    border: 1px solid brand-color(muted, light-blue);
+  }
+}

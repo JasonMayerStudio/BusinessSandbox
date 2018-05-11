@@ -1,0 +1,10 @@
+{
+  "reportFilters": {
+    "title": "Filter",
+    "savedFilters": "Saved Filters",
+    "selectFilter": "Select filter",
+    "noSavedFilters": "No saved filters",
+    "applyFilters": "Apply Filters",
+    "filterName": "Filter Name"
+  }
+}

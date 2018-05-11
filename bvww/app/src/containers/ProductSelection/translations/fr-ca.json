@@ -1,0 +1,24 @@
+{
+  "productSelection": {
+    "lookingForMoreFeatures": "Vous cherchez plus de fonctionnalités?",
+    "title": "Sélection de Produits BusinessView",
+    "customerPlatform": "Plat-Forme Client",
+    "primaryBillingMid": "Facturation Principale MID",
+    "additionalProducts": "Produits et Services Supplémentaires",
+    "finalTotal": "Total Final",
+    "month": "Mois",
+    "reset": "Réinitialiser",
+    "saveProductChanges": "Enregistrer les Modifications du Produit",
+    "addOn": "Ajouter",
+    "addOns": "Ajouter Des Ons",
+    "Add-on 1": "Ajouter 1",
+    "Add-on 2": "Ajouter 2",
+    "monthAbbr": "mo",
+    "off": "ÉTEINT",
+    "on": "SUR",
+    "currentPlan": "Plan Actuel",
+    "lite": "Lite",
+    "pro": "Pro",
+    "includes": "Inclut"
+  }
+}

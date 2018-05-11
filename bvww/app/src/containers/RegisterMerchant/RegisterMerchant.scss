@@ -1,0 +1,87 @@
+.registration-landing {
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.registration-content {
+  display: none;
+}
+
+.registration-illustration,
+.registration-description {
+  align-self: center;
+  margin: 0 auto;
+}
+
+.registration-illustration {
+  height: 240px;
+  margin-right: 0;
+  width: 350px;
+}
+
+.registration-description {
+  color: white;
+}
+
+.registration-description-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+
+  @include list-fade-up(registration-description-list-item);
+}
+
+.registration-description-list-item {
+  display: block;
+  opacity: 0;
+
+  @include stack(s);
+
+  &:not(:nth-child(1)):before {
+    background-image: url('./img/checkmark.svg');
+    background-repeat: no-repeat;
+    content: '';
+    display: inline-block;
+    margin-right: spacing(s);
+    height: 20px;
+    position: relative;
+    top: 5px;
+    width: 20px;
+  }
+}
+
+.registration-panel {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  .link-inline {
+    cursor: pointer;
+    margin-top: spacing(m);
+    justify-content: center;
+  }
+}
+
+@include breakpoint(l) {
+
+  .registration-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+@include breakpoint(xl) {
+
+  .registration-content {
+    flex-direction: row;
+  }
+
+  .registration-illustration,
+  .registration-description {
+    margin: spacing(l);
+  }
+}

@@ -1,0 +1,20 @@
+.gd-date-cell {
+  text-align: left;
+
+  @include equal-spacing(s);
+
+  &__date {
+    display: block;
+    font-weight: 500;
+    line-height: 14px;
+  }
+
+  &__time {
+    color: brand-color(gray, light);
+    display: block;
+    font-weight: 400;
+    line-height: 14px;
+
+    @include font-scale(s);
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "currency": "Currency",
+    "searchCurrencies": "Search Currencies",
+    "upgradeToPro1": "Your version of Business View only gives you access to three months of transaction data.",
+    "upgradeToPro2": "Please ",
+    "upgradeToPro3": "upgrade your product selection",
+    "upgradeToPro4": " to see more data or contact your administrator to do so.",
+    "yesterday": "Yesterday",
+    "lastWeek": "Last Week",
+    "lastMonth": "Last Month",
+    "lastYear": "Last Year"
+  }
+}

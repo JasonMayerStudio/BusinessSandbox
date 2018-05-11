@@ -1,0 +1,10 @@
+.content-tabs {
+
+  .button-hollow.current {
+    color: #fff;
+    background-color: brand-color(primary, dark);
+    border-color: brand-color(primary, dark);
+    border-right: 0;
+    cursor: inherit;
+  }
+}

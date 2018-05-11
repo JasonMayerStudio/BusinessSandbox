@@ -1,0 +1,8 @@
+{
+  "complexColumns": {
+    "associate": "Associer",
+    "chain": "Chaîne",
+    "merchantNumber": "ID Marchand",
+    "acquirer": "Acquéreur"
+  }
+}

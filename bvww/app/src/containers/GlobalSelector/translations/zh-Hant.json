@@ -1,0 +1,14 @@
+{
+  "globalSelector": {
+    "title": "商戶層次數據",
+    "clearAll": "清除所有",
+    "addMore": "添加更多",
+    "cancel": "取消",
+    "update": "更新選擇器",
+    "merchants": {
+      "zero": "商家選擇",
+      "one": "商家選擇",
+      "other": "商家選擇"
+    }
+  }
+}

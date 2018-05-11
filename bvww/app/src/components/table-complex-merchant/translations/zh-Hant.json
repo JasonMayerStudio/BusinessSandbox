@@ -1,0 +1,8 @@
+{
+  "complexColumns": {
+    "associate": "關聯",
+    "chain": "鏈",
+    "merchantNumber": "商家ID",
+    "acquirer": "收購"
+  }
+}

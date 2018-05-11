@@ -1,0 +1,414 @@
+.site-header-container {
+  flex: 100%;
+  height: calc(
+    #{$mobile-site-header-height} + #{$mobile-global-selector-height}
+  );
+
+  @include breakpoint(m) {
+    height: auto;
+  }
+}
+
+.logo-wrapper {
+  display: inline-block;
+  height: 27px;
+  position: relative;
+}
+
+.global-actions .branding {
+  height: 27px;
+}
+
+.global-payments-logo {
+  margin-left: spacing(m);
+  height: 100%;
+
+  @include breakpoint(l) {
+    margin-left: auto;
+  }
+}
+
+.user-menu {
+  align-items: flex-start;
+  color: brand-color(gray, light);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include equal-spacing(xs);
+
+  .button-link {
+    color: brand-color(gray, light);
+    height: auto;
+    padding: 0;
+  }
+}
+
+// BEGIN SMP CODE
+.UserAvatar {
+
+  &:after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid currentColor;
+    clear: both;
+    content: '';
+    display: inline-block;
+    margin: 5px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: all 200ms ease-in-out;
+  }
+}
+
+.UserAvatar--inner {
+  color: #fff;
+  margin-right: 15px;
+  background-color: brand-color(primary, xx-dark) !important; // stylelint-disable
+  font-size: 18px;
+}
+// END SMP CODE
+
+.user-submenu {
+  align-items: flex-start;
+  background-color: white;
+  border: 0.5px solid brand-color(gray, x-light);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 45px;
+  top: 85px;
+  // @desc this item should appear above most content on the page
+  z-index: 15;
+
+  &:before {
+    background-color: white;
+    border-right: 1px solid brand-color(gray, x-light);
+    border-top: 1px solid brand-color(gray, x-light);
+    bottom: calc(100% - 4px);
+    content: '';
+    height: 8px;
+    position: absolute;
+    right: 13px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 8px;
+    z-index: 0;
+  }
+
+  .button {
+    @include font-spacing(12px, 0.4px, 500);
+    color: brand-color(gray, light);
+    padding: 4px 32px 4px 16px; // super offset-spacing; doesn't match one of our predefined
+    text-align: left;
+    text-transform: none;
+    width: 100%;
+
+    &:first-of-type {
+      border-bottom: 0.5px solid brand-color(gray, x-light);
+    }
+
+    &:hover {
+      color: brand-color(gray, x-dark);
+    }
+  }
+}
+
+.view-profile,
+.logout {
+  width: 100%;
+}
+
+.user-name {
+  @include font-spacing(14px, 1px, normal);
+
+  @include stack(xs);
+
+  @include arrow(false, currentColor);
+
+  text-transform: uppercase;
+}
+
+.user-role {
+  @include font-spacing(10px, 0, normal);
+}
+
+.mobile-subnav {
+  // @desc this item should appear above most content on the page, but lower than popups
+  //   popups are at 15
+  z-index: 10;
+}
+
+.mobile-navigation-globalselector {
+  display: none;
+}
+
+@include breakpoint(l) {
+
+  .is-mobile {
+    display: none;
+  }
+
+  .mobile-subnav {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  .global-actions .desktop-navigation {
+    width: 100%;
+    display: flex;
+    flex: 0 0 calc(100% - 300px);
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@include breakpoint(s) {
+
+  .global-actions {
+    height: $site-header-height;
+
+    @include offset-spacing(m, l);
+  }
+}
+
+@include breakpoint(l, max-width) {
+
+  .mobile-hidden {
+    display: none;
+  }
+
+  .site-header-container {
+    // @desc this item should appear above most content on the page
+    z-index: 15;
+  }
+
+  .mobile-subnav .primary-nav {
+    display: inline-block;
+    width: 100%;
+    opacity: 1;
+
+    .co-branding {
+      display: none;
+    }
+
+    .vertical-nav-action:before,
+    .vertical-nav-action-active:before {
+      display: none;
+    }
+  }
+
+  .global-selector-flag-value {
+    color: brand-color(gray, dark);
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+
+  .global-actions {
+    height: $site-header-height;
+    position: relative;
+    z-index: 11;
+  }
+
+  .mobile-navigation {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .mobile-subnav {
+    background-color: brand-color(gray, xx-dark);
+    position: absolute;
+    top: 88px;
+    width: 100vw;
+    z-index: 10;
+    animation-duration: 0.2s;
+    -webkit-animation-duration: 0.2s;
+  }
+
+  .mobile-navigation-userinfo {
+    @include offset-spacing(s, m);
+
+    height: 60px;
+    display: flex;
+    flex-flow: row nowrap;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+
+    .user-container {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+    }
+
+    .user-container .user-name {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: brand-color(gray, light);
+    }
+
+    .user-container .user-name:after {
+      display: none;
+    }
+
+    .user-container .user-role {
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: capitalize;
+
+      @include stack(s);
+    }
+
+    .user-links {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .user-links .button {
+      font-size: 10px;
+      color: white;
+      text-transform: uppercase;
+      border: 1px solid white;
+
+      @include equal-spacing(s);
+      letter-spacing: 0;
+      margin-right: spacing(s);
+
+      &:hover {
+        background-color: white;
+        color: brand-color(primary, base);
+        transition: all 0.4s ease-in-out;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .mobile-location {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 spacing(s);
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+    outline: none;
+
+    &:hover {
+      color: brand-color(primary, base);
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: relative;
+      margin: 0 spacing(s);
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 4px solid currentColor;
+      clear: both;
+      top: -2px;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+@include breakpoint(s, max-width) {
+  .global-actions {
+    padding: 0 spacing(m);
+    height: 64px;
+  }
+
+  .mobile-subnav {
+    top: 64px;
+  }
+
+  .mobile-navigation-globalselector {
+    display: inline-flex;
+    width: 100vw;
+    height: $mobile-global-selector-height;
+    background-color: brand-color(gray, base);
+    color: white;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include offset-spacing(s, m);
+
+    .global-selector-flag-label,
+    .global-selector-flag-value {
+      color: white;
+    }
+
+    &:hover {
+      background-color: brand-color(gray, x-dark);
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: relative;
+      margin: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 4px solid currentColor;
+      clear: both;
+      top: -2px;
+      transform: rotate(0deg);
+    }
+  }
+
+  .mobile-navigation-globalselector .global-selector-flag {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+}
+
+@include breakpoint(xs, max-width) {
+
+  .mobile-subnav .mobile-navigation-userinfo {
+
+    .user-role {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 200px;
+    }
+  }
+}
+
+.mobile-nav-enter {
+  opacity: 0.01;
+  transform: translateY(-125%);
+}
+
+.mobile-nav-enter.mobile-nav-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 250ms ease-in, transform 75ms ease-in;
+}
+
+.mobile-nav-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-nav-leave.mobile-nav-leave-active {
+  opacity: 0.01;
+  transform: translateY(-125%);
+  transition: opacity 300ms ease-in, transform 50ms ease-in;
+}

@@ -1,0 +1,29 @@
+@import '~normalize.css';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#catalog {
+  .catalog-h2, .catalog-h3, .catalog-h4, .catalog-p {
+    flex: 0 0 100%;
+  }
+
+  .catalog-h2 {
+    font-size: 1.5em;
+  }
+
+  .catalog-h3 {
+    font-size: 1.17em;
+    margin: 30px 0 15px 0;
+    font-weight: bold;
+  }
+
+  .catalog-h4 {
+    font-size: 14px;
+    line-height: 1.8px;
+  }
+}

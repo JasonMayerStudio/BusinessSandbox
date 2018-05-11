@@ -1,0 +1,24 @@
+.gd-report-builder-header {
+  align-items: center;
+  background-color: brand-color(gray, xx-light);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  flex-direction: row;
+  width: 100%;
+
+  .saved-state {
+    font-style: italic;
+    margin-left: spacing(s);
+    margin-right: spacing(m);
+  }
+
+  .disabled {
+    opacity: 20%;
+    user-select: none;
+  }
+
+  .toggle-preview-btn {
+    margin-left: spacing(s);
+  }
+}

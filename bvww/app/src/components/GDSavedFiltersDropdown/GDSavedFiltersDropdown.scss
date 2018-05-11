@@ -1,0 +1,174 @@
+.gd-filters-dropdown {
+  background-color: brand-color(muted);
+  text-align: left;
+  width: 230px;
+
+  &__wrapper {
+
+    .option-box-content {
+      right: 0;
+      top: 50px;
+    }
+
+    .dropdown-menu-trigger {
+      font-weight: 700;
+    }
+  }
+
+  &__header {
+    @include offset-spacing(s, m);
+
+    @include font-scale(m);
+
+    background-color: brand-color(primary, x-dark);
+    color: brand-color(muted);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .search,
+  &__item,
+  &__content--no-filters {
+    @include equal-spacing(s);
+
+    border-bottom: 1px solid brand-color(muted, dark-blue);
+    border-left: 1px solid brand-color(muted, dark-blue);
+    border-right: 1px solid brand-color(muted, dark-blue);
+  }
+
+  .search {
+    @include offset-spacing(s, m);
+    
+    margin: 0;
+
+    &:after {
+      margin: 0;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+
+  &__item,
+  .search-field {
+    font-size: 12px;
+  }
+
+  &__items {
+    border-bottom: 1px solid brand-color(muted, dark-blue);
+    list-style-type: none;
+    margin: 0;
+    max-height: 125px;
+    // overflow: scroll;
+    padding: 0;
+  }
+
+  &__item {
+    cursor: pointer;
+    position: relative;
+
+    @include offset-spacing(s, m);
+
+    span:focus {
+      outline: none;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .filter-name {
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 195px;
+  }
+
+  .filter-name.filter-active {
+    width: 129px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .active {
+    border-radius: 4px;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 2px spacing(xs);
+    position: absolute;
+    right: 30px;
+    text-transform: uppercase;
+    top: 8px;
+  }
+
+  .active.loaded {
+    background-color: brand-color(alert, success);
+    color: brand-color(muted);
+    font-weight: 900;
+
+    @include offset-spacing(xxs, s);
+  }
+
+  .remove {
+    display: inline-block;
+    height: 15px;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 15px;
+
+    &:before,
+    &:after {
+      background-color: brand-color(alert, danger);
+      content: '';
+      height: 1px;
+      left: 0;
+      margin-top: -1px;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__content--no-filters {
+    @include offset-spacing(s, l);
+
+    text-align: center;
+  }
+
+  .question-mark {
+    @include offset-spacing(xs, m);
+
+    background-color: #dbdee4;
+    border-radius: 50%;
+    color: brand-color(muted);
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+
+    &:after {
+      content: '?';
+    }
+  }
+
+  .create-a-filter__title {
+    color: brand-color(gray, x-dark);
+    display: block;
+    font-weight: 600;
+  }
+
+  .create-a-filter__content {
+    color: #8a92a5;
+  }
+}

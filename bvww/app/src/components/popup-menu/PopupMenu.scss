@@ -1,0 +1,107 @@
+.popup-menu {
+
+  &__wrapper {
+    cursor: pointer;
+    display: inline;
+    position: relative;
+
+    @include equal-spacing(xs);
+  }
+
+  background-color: brand-color(gray, x-dark);
+  border-radius: 4px;
+  letter-spacing: 0.4px;
+  line-height: 1.2;
+  opacity: 0.9;
+  position: absolute;
+  width: 230px;
+  // @desc this item should appear above most content on the page
+  z-index: 15;
+
+  @include offset-spacing(xs, m);
+
+  &:before {
+    background-color: inherit;
+    content: '';
+    height: 11px;
+    opacity: 0.9;
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 15px;
+    z-index: -1;
+  }
+
+  &.bottom {
+    right: -30px;
+    top: 30px;
+
+    &:before {
+      bottom: calc(100% - 10px);
+      right: 105px;
+    }
+  }
+
+  &__header {
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    margin: auto -16px; // magic number to account for padding
+
+    @include offset-spacing(s, m);
+  }
+
+  .headline,
+  .link,
+  .content {
+    @include font-scale(m);
+  }
+
+  .headline,
+  .link {
+    color: brand-color(gray, light);
+    text-transform: uppercase;
+
+    @include equal-spacing(xs);
+
+    @include font-spacing(10px, 0.4px, normal);
+  }
+
+  .headline {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .link {
+    text-decoration: underline;
+  }
+
+  .content {
+    color: white;
+    display: block;
+    list-style: none;
+    padding: 0;
+
+    @include font-spacing(12px, 0.4px, 500);
+
+    li {
+      @include stack(s);
+
+      text-transform: none;
+    }
+
+    li:before {
+      content: '✓ ';
+    }
+  }
+}
+
+.trailing-text {
+  color: brand-color(gray, x-dark);
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @include font-spacing(10px, 0, bold);
+
+
+  @include equal-spacing(xs);
+}

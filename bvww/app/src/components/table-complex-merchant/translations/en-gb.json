@@ -1,0 +1,8 @@
+{
+  "complexColumns": {
+    "associate": "Associate",
+    "chain": "Chain",
+    "merchantNumber": "Merchant Id",
+    "acquirer": "Acquirer"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "columns": {
+    "merchantNumber": "ID Marchand",
+    "hasAccess": "Accès?",
+    "dbaName": "Nom DBA",
+    "fullAddress": "Adresse De Lieu"
+  }
+}
