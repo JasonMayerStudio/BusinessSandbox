@@ -1,8 +1,0 @@
-{
-  "columns": {
-    "merchantNumber": "商家ID",
-    "hasAccess": "访问?",
-    "dbaName": "DBA名称",
-    "fullAddress": "位置地址"
-  }
-}

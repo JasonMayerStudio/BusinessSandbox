@@ -1,8 +1,0 @@
-// ---------------------------------------------------------------
-// Function to return the brand colors from the Sass map
-// in the _theme.scss files
-// ---------------------------------------------------------------
-
-@function brand-color($color, $tone: 'base') {
-  @return map-get(map-get($colors, $color), $tone);
-}
