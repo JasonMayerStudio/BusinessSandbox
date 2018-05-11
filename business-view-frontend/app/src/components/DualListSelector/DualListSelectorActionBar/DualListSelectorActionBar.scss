@@ -1,0 +1,26 @@
+.dual-list-selector__action-bar {
+  @include offset-spacing(none, m);
+
+  align-items: center;
+  border-top: 1px solid brand-color(gray, x-light);
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+  color: brand-color(gray, x-dark);
+  justify-content: space-between;
+  min-height: 45px;
+
+  .button-link-inline {
+    @include offset-spacing(none, s);
+    font-size: 12px;
+  }
+
+  #_columnManager_btn_Add_All,
+  #_columnManager_btn_Remove_All {
+    padding-left: 0;
+  }
+
+  #_columnManager_btn_Hide_All {
+    padding-right: 0;
+  }
+}

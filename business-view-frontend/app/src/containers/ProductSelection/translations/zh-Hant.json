@@ -1,0 +1,23 @@
+{
+  "productSelection": {
+    "lookingForMoreFeatures": "尋找更多的功能？",
+    "title": "BusinessView產品選擇",
+    "customerPlatform": "客戶平台",
+    "primaryBillingMid": "主要結算中",
+    "additionalProducts": "額外的產品和服務",
+    "finalTotal": "最後的總數",
+    "month": "月",
+    "reset": "重啟",
+    "saveProductChanges": "保存產品更改",
+    "addOn": "加上",
+    "addOns": "附加",
+    "Add-on 1": "加上 1",
+    "Add-on 2": "加上 2",
+    "off": "離",
+    "on": "上",
+    "currentPlan": "目前的計劃",
+    "lite": "精簡版",
+    "pro": "親",
+    "includes": "包括"
+  }
+}

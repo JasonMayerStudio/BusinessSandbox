@@ -1,0 +1,15 @@
+{
+  "merchantColumns": {
+    "merchantNumber": "商家ID",
+    "businessName": "商家名称",
+    "fullAddress": "位置地址",
+    "acquirer": "收购"
+  },
+  "userColumns": {
+    "name": "名称",
+    "email": "电子邮件地址",
+    "status": "状态",
+    "roleName": "角色",
+    "acquirer": "收购"
+  }
+}

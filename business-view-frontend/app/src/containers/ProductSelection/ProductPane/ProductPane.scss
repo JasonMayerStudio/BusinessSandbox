@@ -1,0 +1,94 @@
+.ProductPane {
+  @include equal-spacing(l);
+  width: 265px;
+  display: inline-block;
+
+  &-header {
+    border-bottom: 1px solid brand-color(gray, x-light);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: spacing(m);
+
+    @include stack(l);
+
+    .product-type-container {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .product-type {
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: brand-color(primary, base);
+      color: white;
+      text-transform: uppercase;
+
+      &.active {
+        background-color: brand-color(gray, x-light);
+
+        @include stack(s);
+      }
+    }
+
+    .product-type-current {
+      @include font-scale(s);
+
+      color: brand-color(gray, x-light);
+      display: block;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    .product-price {
+      text-align: right;
+      display: flex;
+      flex-flow: column nowrap;
+
+      span {
+        @include font-scale(m);
+      }
+
+      span:first-child {
+        @include font-scale(xl);
+      }
+    }
+
+    &.hidden { display: none; }
+  }
+
+  &-services {
+    display: flex;
+    flex-flow: column wrap;
+
+    @include stack(l);
+
+    .row-service {
+      display: flex;
+      flex-flow: row nowrap;
+
+      @include stack(s);
+
+      &-option {
+        min-width: 14px;
+        margin-right: spacing(m);
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+      }
+
+      &-duration {
+        @include font-scale(s);
+        text-transform: uppercase;
+        color: brand-color(primary, base);
+        margin-top: 3px;
+      }
+    }
+  }
+}

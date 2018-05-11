@@ -1,0 +1,11 @@
+<svg className="star-icon" width="18px" height="17px" view-box="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <desc>Star Icon</desc>
+  <defs />
+  <g id="Hierarchy-Selector-Prototype" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g class="star-icon__animate" transform="translate(-729.000000, -111.000000)" fill="currentColor">
+      <g id="Hierarchy-Search" transform="translate(256.000000, 100.000000)">
+        <polygon id="StarAnimateFill" points="482 24.5 476.709933 27.2811529 477.720246 21.3905765 473.440491 17.2188471 479.354966 16.3594235 482 11 484.645034 16.3594235 490.559509 17.2188471 486.279754 21.3905765 487.290067 27.2811529" />
+      </g>
+    </g>
+  </g>
+</svg>

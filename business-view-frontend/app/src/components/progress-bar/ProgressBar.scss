@@ -1,0 +1,77 @@
+.progress {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: spacing(l);
+  width: 100%;
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: spacing(xs);
+    width: 100%;
+  }
+
+  &-back-button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding-left: 9px;
+  }
+
+  &-back-button-text {
+
+    &::before {
+      border-bottom: 4px solid transparent;
+      border-right: 4px solid brand-color(gray, x-dark);
+      border-top: 4px solid transparent;
+      clear: both;
+      content: '';
+      display: inline-block;
+      height: 0;
+      left: -6px;
+      margin: 0;
+      position: relative;
+      top: 1px;
+      width: 0;
+    }
+  }
+
+  &-value {
+    @include font-scale(s);
+
+    font-weight: bold;
+    text-align: right;
+    width: auto;
+  }
+}
+
+.progress-bar {
+  appearance: none;
+  border: 0;
+  border-radius: 12px;
+  height: 2.75px;
+  width: 100%;
+
+  /**
+   * These custom webkit and moz settings are hacks for HTML5 implementation details.
+   *
+   * They can't simply be supplied by auto-prefixer.
+   */
+  &::-webkit-progress-bar {
+    background-color: brand-color(gray, x-light);
+    border-radius: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  &::-webkit-progress-value {  /* Webkit / Blink */
+    background-color: brand-color(gray, x-dark);
+    border-radius: 100px;
+  }
+
+  &::-moz-progress-bar {  /* Firefox, did not work combined with above */
+    background-color: brand-color(gray);
+    border-radius: 100px;
+  }
+}

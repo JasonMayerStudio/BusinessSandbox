@@ -1,0 +1,34 @@
+.multi-select-input {
+
+  .checkbox-field {
+    position: relative;
+  }
+
+  .checkbox-field:nth-last-child(-n+2) {
+    .information-bubble__wrapper .tooltip { // stylelint-disable
+      top: -60px;
+
+      &:before {
+        bottom: -3px;
+        top: auto;
+      }
+    }
+  }
+
+  .information-bubble__wrapper {
+    @include equal-spacing(xs);
+
+    .tooltip {
+      width: 190px;
+    }
+  }
+
+  .field-label {
+    @include stack(s);
+  }
+
+  .checkbox-list {
+    max-height: 10em;
+    overflow: scroll;
+  }
+}

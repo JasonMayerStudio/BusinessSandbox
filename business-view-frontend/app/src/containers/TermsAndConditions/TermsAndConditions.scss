@@ -1,0 +1,72 @@
+.terms-and-conditions {
+  background-color: white;
+  width: 100%;
+
+  &-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 15%;
+    // @desc this item should appear above ALL content on the page, until accepted
+    z-index: 25;
+  }
+
+  &-header,
+  &-content {
+    @include equal-spacing(m);
+  }
+
+  &-header {
+    background-color: brand-color(gray, x-dark);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include font-scale(m);
+  }
+
+  &-content {
+    color: brand-color(gray, dark);
+    max-height: 510px;
+    overflow: scroll;
+  }
+
+  &-content-header {
+    color: brand-color(gray, x-dark);
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include stack(m);
+  }
+
+  &-content-header:not(:first-child) {
+    margin-top: spacing(m);
+  }
+
+  &-footer {
+    border-top: 1px solid brand-color(gray, light);
+    text-align: center;
+
+    @include equal-spacing(m);
+  }
+}
+
+@include breakpoint(s) {
+
+  .terms-and-conditions-wrapper {
+    left: calc(100% / 5);
+  }
+
+  .terms-and-conditions {
+    width: 480px;
+  }
+}
+
+@include breakpoint(l) {
+
+  .terms-and-conditions-wrapper {
+    left: 40%;
+  }
+}

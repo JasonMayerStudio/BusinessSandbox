@@ -1,0 +1,119 @@
+.checkbox {
+  opacity: 0; // hide it
+  
+  + label {
+    color: brand-color(gray, light);
+    cursor: pointer;
+    padding-bottom: spacing(xs);
+    padding-top: spacing(xs);
+    position: relative;
+    user-select: none;
+  }
+
+  // Box.
+  + label:before {
+    background-color: white;
+    border: 1px solid brand-color(gray, light);
+    box-sizing: border-box;
+    content: '';
+    display: inline-block;
+    height: 18px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 18px;
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background-color: white;
+  }
+
+  &:checked + label {
+    color: brand-color(gray, x-dark);
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: brand-color(gray, x-light);
+    cursor: not-allowed;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    background-color: brand-color(gray, x-light);
+    border: 1px solid brand-color(gray, x-light);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    background-color: brand-color(alert, success);
+    box-shadow: 2px 0 0 brand-color(alert, success),
+                4px 0 0 brand-color(alert, success),
+                4px -2px 0 brand-color(alert, success),
+                4px -4px 0 brand-color(alert, success),
+                4px -6px 0 brand-color(alert, success),
+                4px -8px 0 brand-color(alert, success);
+    content: '';
+    height: 2px;
+    left: 4px;
+    position: absolute;
+    top: 12px;
+    transform: rotate(45deg);
+    width: 2px;
+  }
+
+  &:disabled + label:after {
+    background-color: brand-color(gray, light);
+    box-shadow: 2px 0 0 brand-color(gray, light),
+                4px 0 0 brand-color(gray, light),
+                4px -2px 0 brand-color(gray, light),
+                4px -4px 0 brand-color(gray, light),
+                4px -6px 0 brand-color(gray, light),
+                4px -8px 0 brand-color(gray, light);
+  }
+
+  &-label {
+    color: brand-color(gray, light);
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 22px;
+  }
+
+  &-label.checked {
+    color: brand-color(gray, x-dark);
+  }
+}
+
+.checkbox-group-parent-label,
+.field-group-vertical .checkbox-group {
+  @include stack(s);
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-field {
+  @include offset-spacing(xs, s);
+  
+  @include font-scale(s);
+
+  padding-top: 5px;
+  border-bottom: 1px solid brand-color(gray, xx-light);
+
+  .information-bubble__wrapper {
+    @include font-scale(l);
+
+    line-height: 22px;
+    margin-left: 5px;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.checkbox-list {
+  background-color: #fff;
+  border: 1px solid brand-color(gray, xx-light);
+}

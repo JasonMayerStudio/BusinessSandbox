@@ -1,0 +1,102 @@
+/* ---------------------------------------------------------
+Headings
+@include font-scale(xxl); is a mixin from the helper.scss
+It includes the correct font-size and line-height
+from the theme.scss
+--------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+%h1,
+%h2,
+%h3,
+%h4,
+%h5,
+%h6 {
+  font-family: $heading-font-family;
+  margin-top: 0;
+}
+
+h1,
+.title,
+%h1 {
+  @include font-scale(xl);
+
+  @include stack(s);
+
+  color: brand-color(gray, xx-dark);
+  font-weight: 500;
+}
+
+h2,
+.subtitle,
+%h2 {
+  @include font-scale(l);
+
+  @include stack(s);
+
+  color: brand-color(gray);
+  font-weight: 400;
+}
+
+h3,
+.subsubtitle
+%h3 {
+  @include font-scale(m);
+
+  @include stack(xs);
+
+  color: brand-color(gray);
+  font-weight: 400;
+}
+
+h4,
+%h4 {
+  @include font-scale(s);
+
+  @include stack(xs);
+
+  color: brand-color(gray);
+  font-weight: 400;
+}
+
+h5,
+%h5 {
+  @include font-scale(xs);
+
+  @include stack(xxs);
+
+  color: brand-color(gray);
+  font-weight: 400;
+}
+
+h6,
+%h6 {
+  @include font-scale(xxs);
+
+  @include stack(xxs);
+
+  color: brand-color(gray);
+  font-weight: 400;
+}
+
+.navigation-title {
+  @include font-scale(m);
+
+  @include stack(s);
+
+  color: brand-color(gray, dark);
+  font-weight: 400;
+}
+
+.widget-title {
+  @include font-scale(l);
+
+  @include stack(m);
+
+  color: brand-color(gray, x-dark);
+  font-weight: 100;
+}

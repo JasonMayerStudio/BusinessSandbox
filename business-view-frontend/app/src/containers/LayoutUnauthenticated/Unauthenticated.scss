@@ -1,0 +1,59 @@
+.landing {
+  background-color: #3a3d46;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.landing-content {
+  padding-top: 50px;
+}
+
+.landing-panel {
+  background-color: white;
+  color: brand-color(gray, dark);
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 50px;
+  min-width: 100%;
+  // @desc this item should appear above most content on the page
+  //   popups are at 15
+  z-index: 10;
+
+  .button {
+    width: 100%;
+  }
+}
+
+.link-inline {
+  align-items: center;
+  color: brand-color(gray, light);
+  display: flex;
+  font-size: 10px;
+  font-weight: bold;
+  justify-content: flex-start;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  span {
+    margin-left: spacing(s);
+  }
+
+  &:hover {
+    color: brand-color(primary, base);
+    transition: color .5s ease-in-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@include breakpoint(l) {
+
+  .landing-panel {
+    min-width: 500px;
+  }
+}

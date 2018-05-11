@@ -1,0 +1,14 @@
+.save-input {
+  @include stack(m);
+
+  display: flex;
+  flex-direction: row;
+
+  .field-input {
+    flex-grow: 1;
+  }
+
+  .button {
+    height: $field-height;
+  }
+}

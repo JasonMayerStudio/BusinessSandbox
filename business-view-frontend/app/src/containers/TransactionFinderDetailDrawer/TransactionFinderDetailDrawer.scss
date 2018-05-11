@@ -1,0 +1,23 @@
+.drawer-dataset {
+  border-bottom: 1px solid brand-color(gray, x-light);
+}
+
+.drawer-dataset:last-of-type {
+  border-bottom: 0;
+}
+
+.drawer-heading .badge {
+  bottom: -10px;
+  position: absolute;
+}
+
+.transaction-finder-drawer {
+
+  .drawerTitles {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}

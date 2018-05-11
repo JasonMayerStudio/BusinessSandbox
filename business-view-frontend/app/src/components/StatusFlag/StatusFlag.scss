@@ -1,0 +1,42 @@
+%status-flag__indicator {
+  border-radius: 50%;
+  display: inline-block;
+  height: spacing(s);
+  vertical-align: middle;
+  width: spacing(s);
+}
+
+.status-flag {
+  @include equal-spacing(s);
+
+  align-items: center;
+  display: flex;
+  line-height: 1;
+
+  &__label {
+    margin-right: spacing(xs);
+  }
+
+  &__content {
+    font-weight: 700;
+    margin-right: spacing(s);
+  }
+
+  &__indicator--good {
+    @extend %status-flag__indicator;
+
+    background-color: brand-color(alert, success);
+  }
+
+  &__indicator--warn {
+    @extend %status-flag__indicator;
+
+    background-color: brand-color(alert, warning);
+  }
+
+  &__indicator--bad {
+    @extend %status-flag__indicator;
+
+    background-color: brand-color(alert, danger);
+  }
+}

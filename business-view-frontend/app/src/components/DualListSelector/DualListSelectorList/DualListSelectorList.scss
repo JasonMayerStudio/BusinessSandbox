@@ -1,0 +1,19 @@
+.dual-list-selector__list {
+  @include offset-spacing(none, m);
+
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0;
+  justify-content: space-between;
+
+  &-wrapper {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .column-widget__name {
+    color: brand-color(gray, x-dark);
+    font-weight: 500;
+    font-size: 12px;
+  }
+}

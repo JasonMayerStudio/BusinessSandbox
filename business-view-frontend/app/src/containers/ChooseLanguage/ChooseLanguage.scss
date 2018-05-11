@@ -1,0 +1,69 @@
+.language-landing {
+  align-items: stretch;
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+
+  &-welcome,
+  &-welcome-text {
+    display: none;
+  }
+}
+
+.language-panel {
+  background-color: white;
+  color: brand-color(gray, dark);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 50px;
+  width: 460px;
+  // @desc this item should appear above most content on the page, but lower than popups
+  //   popups are at 15
+  z-index: 10;
+
+  .field-label {
+    @include stack(s);
+  }
+
+  .select-menu.field-input {
+
+    .dropdown-menu-trigger {
+      width: 100%;
+    }
+  }
+
+  .language-description {
+    @include stack(l);
+  }
+}
+
+@include breakpoint(l) {
+
+  .language-landing {
+    display: block;
+
+    &-welcome {
+      align-self: center;
+      background-image: url('./img/world-map.svg');
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      color: white;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+
+      @include font-scale(xl);
+    }
+
+    &-welcome-text {
+      display: block;
+      opacity: 0;
+
+      @include stack(xl);
+    }
+
+    @include list-fade-up(language-landing-welcome-text);
+  }
+}

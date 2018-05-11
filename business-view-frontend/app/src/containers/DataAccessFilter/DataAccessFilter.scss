@@ -1,0 +1,48 @@
+%data-access-filter-chain {
+  @include stack(m);
+
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.data-access-filter-chain-vertical {
+
+  .org-selector-widget {
+    @include stack(m);
+
+    width: 100%;
+
+    .autocomplete {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.data-access-filter-chain-horizontal {
+  @extend %data-access-filter-chain;
+
+  .org-selector-widget {
+    flex: 1 1 auto;
+    margin-right: 1em;
+  }
+}
+
+.hide-all-but-first {
+
+  .org-selector-widget:nth-child(n+2) {
+    display: none;
+  }
+}
+
+.delete-access {
+  align-self: flex-end;
+}
+
+@include breakpoint(l, max-width) {
+
+  .data-access-filter-chain-horizontal .org-selector-widget:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,69 @@
+.information-bubble {
+
+  &__wrapper {
+    display: inline;
+    position: relative;
+
+    @include equal-spacing(s);
+  }
+
+  &:hover > .information-icon:hover {
+    cursor: pointer;
+    fill: brand-color(gray, x-dark);
+  }
+}
+
+/* stylelint-disable declaration-no-important */
+.__react_component_tooltip.place-top {
+  margin-top: -15px !important;
+}
+
+.__react_component_tooltip.type-dark.place-top.info::after {
+  border-top-color: brand-color(gray, x-dark) !important;
+}
+
+.__react_component_tooltip.type-dark.place-top.error::after {
+  border-top-color: brand-color(alert, danger) !important;
+}
+/* stylelint-enable declaration-no-important */
+
+.__react_component_tooltip.tooltip {
+  border-radius: 4px;
+  letter-spacing: 0.4px;
+  line-height: 1.2;
+  width: 255px;
+  // @desc this item should appear above most content on the page, but lower than popups
+  //   popups are at 15
+  z-index: 10;
+
+  &.info {
+    background-color: brand-color(gray, x-dark);
+  }
+
+  &.error {
+    background-color: brand-color(alert, danger);
+  }
+
+  @include equal-spacing(m);
+
+  .headline,
+  .content {
+    @include font-scale(s);
+  }
+
+  .headline {
+    color: brand-color(gray, light);
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .content {
+    color: white;
+    display: block;
+  }
+
+  &__icon {
+    padding-right: spacing(xs);
+  }
+}
